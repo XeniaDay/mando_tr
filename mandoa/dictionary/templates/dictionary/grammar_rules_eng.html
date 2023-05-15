@@ -1,0 +1,2681 @@
+{% extends 'dictionary/base_design.html' %}
+
+{% block title %}Grammar{% endblock %}
+
+{% block navigat1 %}
+<a href="{% url 'home_eng' %}" class="a_nav">Dictionary</a> |
+| <a href="{% url 'grammar_eng' %}" class="a_nav">Grammar</a> |
+| <a href="{% url 'about_us_eng' %}" class="a_nav">About us</a>
+{% endblock %}
+
+{% block underline %}
+    <table class="nav_lang">
+        <tr>
+            <td class="rus_eng">
+                <a href="{% url 'home' %}" class="a_link">
+                    <div class="lang_underline">
+                        <div class="align_lg">r]S'a</div>
+                        <div class="add_text_lg">РУС</div>
+                    </div>
+                </a>
+            </td>
+            <td class="rus_eng">
+                <a href="{% url 'home_eng' %}" class="a_link">
+                    <div>
+                        <div class="align_lg">engle'a</div>
+                        <div class="add_text_lg">ENG</div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="button_login"></button>
+            </td>
+        </tr>
+    </table>
+{% endblock %}
+
+{% block aside %}
+    <h3 class="options"> Grammar </h3>
+    <div class="grammar_menu_box">
+        <ul class="grm_menu">
+            <li class="grm_menu_point">
+                <div class="grm_menu_btm"></div>
+                    <a href="#gr_rule_1" class="grm_menu_link"> Mandor (alphabet)</a>
+            </li>
+            <li class="grm_menu_point">
+                <div class="grm_menu_btm"></div>
+                    <a href="#gr_rule_2" class="grm_menu_link"> Pronouns </a>
+            </li>
+            <li class="grm_menu_point">
+                <div class="block-2">
+                    <a href="#gr_rule_3_sub" class="grm_menu_btm"> ▽ </a>
+                    <a href="#gr_rule_3" class="grm_menu_link"> Nouns </a>
+                </div>
+                <div id="gr_rule_3_sub" class="grm-submenu">
+                    <a href="#gr_rule_3_1" class="grm-submenu-link"> Plural number </a>
+                    <a href="#gr_rule_3_2" class="grm-submenu-link"> Possessive case </a>
+                </div>
+            </li>
+            <li class="grm_menu_point">
+                <div class="block-2">
+                    <a href="#gr_rule_4_sub" class="grm_menu_btm"> ▽ </a>
+                    <a href="#gr_rule_4" class="grm_menu_link"> Negative forms </a>
+                </div>
+                <div id="gr_rule_4_sub" class="grm-submenu">
+                    <a href="#gr_rule_4_1" class="grm-submenu-link"> Prefixes ne' and nu'</a>
+                    <a href="#gr_rule_4_2" class="grm-submenu-link"> prefix noy'</a>
+                </div>
+            </li>
+            <li class="grm_menu_point">
+                <div class="block-2">
+                    <a href="#gr_rule_5_sub" class="grm_menu_btm"> ▽ </a>
+                    <a href="#gr_rule_5" class="grm_menu_link"> Verbs </a>
+                </div>
+                <div id="gr_rule_5_sub" class="grm-submenu">
+                    <a href="#gr_rule_5_1" class="grm-submenu-link"> Command inclination </a>
+                    <a href="#gr_rule_5_2" class="grm-submenu-link"> Conjugation verbs </a>
+                    <a href="#gr_rule_5_3" class="grm-submenu-link"> Forms verb cuyir</a>
+                    <a href="#gr_rule_5_4" class="grm-submenu-link"> General times </a>
+                    <a href="#gr_rule_5_5" class="grm-submenu-link"> Passive bail </a>
+                    <a href="#gr_rule_5_6" class="grm-submenu-link"> Modal verbs - prefixes </a>
+                </div>
+            </li>
+            <li class="grm_menu_point">
+                <div class="block-2">
+                    <a href="#gr_rule_6_sub" class="grm_menu_btm"> ▽ </a>
+                    <a href="#gr_rule_6" class="grm_menu_link"> Adjectives </a>
+                </div>
+                <div id="gr_rule_6_sub" class="grm-submenu">
+                    <a href="#gr_rule_6_1" class="grm-submenu-link"> Comparative form </a>
+                    <a href="#gr_rule_6_2" class="grm-submenu-link"> Excellent form </a>
+                </div>
+            </li>
+            <li class="grm_menu_point">
+                <div class="grm_menu_btm"></div>
+                    <a href="#gr_rule_7" class="grm_menu_link"> Unions </a>
+            </li>
+            <li class="grm_menu_point">
+                <div class="block-2">
+                    <a href="#gr_rule_10_sub" class="grm_menu_btm"> ▽ </a>
+                    <a href="#gr_rule_10" class="grm_menu_link"> Suggestions </a>
+                </div>
+                <div id="gr_rule_10_sub" class="grm-submenu">
+                    <a href="#gr_rule_10_1" class="grm-submenu-link"> Subject </a>
+                    <a href="#gr_rule_10_2" class="grm-submenu-link"> Simple predicate </a>
+                    <a href="#gr_rule_10_3" class="grm-submenu-link"> Compound predicate </a>
+                    <a href="#gr_rule_10_7" class="grm-submenu-link"> Interrogative form </a>
+                    <a href="#gr_rule_10_8" class="grm-submenu-link"> Interrogative words </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+{%endblock%}
+
+{% block content %}
+<div class="features">
+<div class="gr_main_scroll">
+<div class = 'gr_main_rule' id="gr_rule_1">
+<h5> Mandor ( alphabet )</h5>
+<div class='indent'>
+<table class="grammar_mandor">
+<tr>
+<td>
+m
+</td>
+<td>
+[ m ] </br>( sea )
+</td>
+<td>
+                                mo
+</td>
+<td>
+b
+</td>
+<td>
+[ b ]</br>( bull )
+</td>
+<td>
+                                bae
+</td>
+<td>
+[
+</td>
+<td>
+[ ai ] </br>( iceberg )
+</td>
+<td>
+                                aya
+</td>
+<td>
+                                g
+</td>
+<td>
+[g]</br>(mountain)
+                            </td>
+<td>
+                                gar
+</td>
+</tr>
+<tr>
+<td>
+a
+</td>
+<td>
+[ a ] </br>( base , </br> slave )
+</td>
+<td>
+                                A
+</td>
+<td>
+y
+</td>
+<td>
+[ th ]</br>( yogi )
+</td>
+<td>
+                                ye
+</td>
+<td>
+l
+</td>
+<td>
+[ l ] </br>( lava )
+</td>
+<td>
+                                le
+</td>
+<td>
+i
+</td>
+                            <td>
+[and] </br>(clip)
+</td>
+                            <td>
+                                in
+</td>
+</tr>
+<tr>
+                            <td>
+n
+</td>
+<td>
+[n]</br>(tax)
+                            </td>
+<td>
+                                ne
+</td>
+<td>
+t
+</td>
+<td>
+[ t ]</br>( cake )
+</td>
+<td>
+                                that
+</td>
+<td>
+s
+</td>
+<td>
+[ with ] </br>( bitch )
+</td>
+<td>
+                                sa
+</td>
+<td>
+c
+</td>
+<td>
+[ h ] </br>( nonsense )
+</td>
+<td>
+                                cha
+</td>
+</tr>
+<tr>
+<td>
+d
+</td>
+<td>
+[ d ]</br>( oak )
+</td>
+<td>
+                                Yes
+</td>
+<td>
+x
+</td>
+<td>
+[ w ]</br>( shock )
+</td>
+<td>
+                                she
+</td>
+<td>
+                                ]
+</td>
+<td>
+[y] </br>(burden)
+                            </td>
+<td>
+                                un
+</td>
+<td>
+w
+</td>
+<td>
+[ ue ] </br>( as w in </br> English warm)
+</td>
+<td>
+                                wen
+</td>
+</tr>
+<tr>
+<td>
+o
+</td>
+<td>
+[ o ]</br>( butt )
+</td>
+<td>
+                                He
+</td>
+<td>
+e
+</td>
+<td>
+[ uh ]</br>( selfish )
+</td>
+<td>
+                                en
+</td>
+<td>
+                                v
+</td>
+<td>
+[at]</br>(thief)
+                            </td>
+<td>
+                                in
+</td>
+<td>
+\
+</td>
+<td>
+[ ouch ] </br>( cut )
+</td>
+<td>
+                                oiv
+</td>
+</tr>
+<tr>
+<td>
+r
+</td>
+<td>
+[ p ]</br>( rock )
+</td>
+<td>
+                                ra
+</td>
+<td>
+                                &
+</td>
+<td>
+[and] </br>(willow)
+</td>
+<td>
+i:n </br>(yin)
+</td>
+<td>
+p
+</td>
+<td>
+[p] </br>(bullet)
+                            </td>
+<td>
+                                pe
+</td>
+<td>
+f
+</td>
+<td>
+[ f ] </br>( torch )
+</td>
+<td>
+                                headlights
+</td>
+</tr>
+<tr>
+<td>
+q
+</td>
+<td>
+[ hey ]</br>( euphoria )
+</td>
+<td>
+                                Hey
+</td>
+<td>
+j
+</td>
+<td>
+[ j ]</br>( jazz )
+</td>
+<td>
+                                ja
+</td>
+<td>
+                                u
+</td>
+<td>
+[a] </br>(boar)
+                            </td>
+<td>
+                                en
+</td>
+<td>
+;
+</td>
+<td>
+[ uy ] </br>( buoy , </br> bourgeois )
+</td>
+<td>
+                                uyn
+</td>
+</tr>
+<tr>
+<td>
+h
+</td>
+<td>
+[ x ] </br>( robe )
+</td>
+<td>
+                                Ha
+</td>
+<td>
+                                k
+</td>
+<td>
+[to] </br>(cat)
+                            </td>
+<td>
+                                ka
+</td>
+<td>
+z
+</td>
+<td>
+[ h ] </br>( call )
+</td>
+<td>
+                                heat
+</td>
+<td>
+                                 '
+</td>
+<td>
+breathing- </br>pause
+</td>
+<td>
+beiten
+</td>
+</tr>
+                    </table>
+</div>
+</div>
+
+<div class = 'gr_main_rule' id="gr_rule_2">
+<h5> Pronouns </h5>
+<div class='indent'>
+                    Pronouns are not divided by gender.
+Most pronouns do not have a separate possessive form.
+                    <table class="pronouns">
+<tr>
+<td class='pronouns_td'>
+<span class="mandor_2" translate="ni">ni</span>
+</td>
+<td class='pronouns_td'>
+                                I
+</td>
+<td class='pronouns_td'>
+<span class="mandor_2" translate="ner">ner</span>
+</td>
+<td class='pronouns_td'>
+                                my
+</td>
+</tr>
+<tr>
+                            <td class='pronouns_td'>
+<span class="mandor_2" translate="gar">gar</span>
+</td>
+<td class='pronouns_td'>
+                                You
+</td>
+<td class='pronouns_td'>
+<span class="mandor_2" translate="gar">gar</span>
+</td>
+<td class='pronouns_td'>
+                                yours , yours
+</td>
+</tr>
+<tr>
+<td class='pronouns_td'>
+<span class="mandor_2" translate="kaysh">k[x</span>
+</td>
+<td class='pronouns_td'>
+                                he , she
+</td>
+<td class='pronouns_td'>
+<span class="mandor_2" translate="kaysh">k[x</span>
+</td>
+<td class='pronouns_td'>
+                                his her
+</td>
+</tr>
+<tr>
+                            <td class='pronouns_td'>
+<span class="mandor_2" translate="mhi">mi</span>
+</td>
+<td class='pronouns_td'>
+                                We
+</td>
+<td class='pronouns_td'>
+<span class="mandor_2" translate="cuun">k}n</span>
+</td>
+<td class='pronouns_td'>
+                                ours, ours
+</td>
+</tr>
+<tr>
+                            <td class='pronouns_td'>
+<span class="mandor_2" translate="g'an">g'an</span>
+</td>
+<td class='pronouns_td'>
+                                You
+</td>
+<td class='pronouns_td'>
+<span class="mandor_2" translate="g'an">g'an</span>
+</td>
+<td class='pronouns_td'>
+                                yours, yours
+</td>
+</tr>
+<tr>
+                            <td class='pronouns_td'>
+<span class="mandor_2" translate="val">val</span>
+</td>
+<td class='pronouns_td'>
+                                They
+</td>
+<td class='pronouns_td'>
+<span class="mandor_2" translate="val">val</span>
+</td>
+<td class='pronouns_td'>
+                                their
+</td>
+</tr>
+</table>
+</div>
+<div class='indent'>
+                    Sometimes , very rare , demonstrative pronoun <span class="mandor_1" translate="bic">bik</span> (" this ")
+                    can also be used in the meaning of "it".
+                </div>
+</div>
+
+<div class = 'gr_main_rule' id="gr_rule_3">
+                <h5>Nouns</h5>
+<div class='indent'>
+Nouns in Mando'a have no gender. If necessary, the genus may be determined by context. </br>
+In very rare cases, when the gender still needs to be clarified, it is possible to use adjectives
+                        <span class="mandor_1" translate="jagyc">jag&x</span> (" male ") or
+<span class="mandor_1" translate="dalyc">dal&x</span> (" female ").
+<div class='example'>
+                        Example :
+<table class = 'grammar_example'>
+<tr>
+<td class = 'grammar_example_td'>
+<span class="mandor_2" translate="Ni copaani evaar'la dalyc haal'cabur">
+ni kopAn& evAr'la dal&x hAl'kab]r</span>
+</td>
+<td class = 'grammar_example_td'>
+                                    I want a new women's chest cuirass
+                                </td>
+</tr>
+<tr>
+<td class = 'grammar_example_td'>
+<span class="mandor_2" translate="Ke'dinui ni jagyc kute">
+ke'd&n;& ni jag&x k]tq</span>
+</td>
+<td class = 'grammar_example_td'>
+                                    Give me men's underwear
+</td>
+                            </tr>
+</table>
+</div>
+</div>
+</div>
+
+<div class = 'gr_main_rule' id="gr_rule_3_1">
+                <h5>Plural</h5>
+<div class="indent">
+The plural is formed by adding the ending
+<span class="mandor_1" translate="-e">-q</span> (after a consonant) or
+                        <span class="mandor_1" translate="-se">-sq</span> ( after vowel ).
+</div>
+<div class='example'>
+                        Example :
+<table class = 'grammar_example'>
+<tr>
+<td class = 'grammar_example_td'>
+<span class="mandor_2" translate="beskar'ade">beskar'adq</span>
+</td>
+<td class = 'grammar_example_td'>
+                                    droids, robots
+</td>
+</tr>
+<tr>
+                                <td class = 'grammar_example_td'>
+<span class="mandor_2" translate="aruetiise">ar]qtIsq</span>
+</td>
+<td class = 'grammar_example_td'>
+                                    outsiders, traitors
+</td>
+</tr>
+</table>
+                    </div>
+</div>
+
+<div class="gr_main_rule" id="gr_rule_3_2">
+                <h5>Possessive</h5>
+<div class="indent">
+The formation of the possessive in Mando'a mostly depends on the context.
+The easiest way is to use the preposition <span class="mandor_1" translate="be">be</span>
+or possessive prefixes <span class="mandor_1" translate="be'">be'</span>.
+                    The difference between them is the same as between the phrases "Saber Boba" and "Bobina saber", i.e. no.
+                    <div class="example">
+                        Example :
+<table class = 'grammar_example'>
+<tr>
+<td class = 'grammar_example_td'>
+<span class="mandor_2" translate="Kad be Boba">
+kad be bobba</span>
+</td>
+<td class = 'grammar_example_td'>
+                                    Saber beans
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_td'>
+<span class="mandor_2" translate="Kad be'Boba">
+kad be'boba</span>
+</td>
+<td class = 'grammar_example_td'>
+                                    Spool saber
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="indent">
+                    Sometimes possessive nouns are attached to an object.
+                    <div class="example">
+                        Example :
+<table class = 'grammar_example'>
+<tr>
+<td class = 'grammar_example_td'>
+<span class="mandor_2" translate="Boba'kad">
+boba'kad</span>
+</td>
+<td class = 'grammar_example_td'>
+                                    Saber beans
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="indent">
+                    A rare and obsolete form is the use of possessive words as suffixes
+                    <span class="mandor_1" translate=" 'be"> 'be</span> or
+<span class="mandor_1" translate=" 'b"> 'b</span>.
+<div class="example">
+                        Example :
+<table class = 'grammar_example'>
+<tr>
+<td class = 'grammar_example_td'>
+<span class="mandor_2" translate="Boba'be kad">
+boba'be kad</span>
+</td>
+<td class = 'grammar_example_td'>
+                                    Saber beans
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_td'>
+<span class="mandor_2" translate="jetii'b kad">
+jetI'b kad</span>
+</td>
+<td class = 'grammar_example_td'>
+                                    Sword Jedi
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<div class="gr_main_rule" id="gr_rule_4">
+                <h5>Negative forms</h5>
+<div class="indent">
+Negative forms can be formed with any part of speech. Denial can also be
+referred to the whole phrase.</br>
+Most often, the negative form is formed from the dictionary forms of the word by adding special
+prefixes.</br> But there are cases, especially for archaic forms, when a negative
+the particle merges with the root stem of the word and in this form is already used independently.</br>
+                    <div class="example">
+                        Example :
+<table class = 'word_transformation'>
+<tr>
+<td class = 'word_transformation_th'>
+                                    console
+</td>
+<td class = 'word_transformation_th'>
+                                    root
+</td>
+<td class = 'word_transformation_th'>
+                                    ending
+</td>
+<td class = 'word_transformation_th'>
+                                    word
+</td>
+<td class = 'word_transformation_th'>
+                                    translation
+</td>
+</tr>
+<tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="no-">
+no-</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="vor">
+vor</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="-er">
+-er</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="novorer">
+novorer</span>
+</td>
+<td class = 'word_transformation_td'>
+                                    block, hinder, resist
+</td>
+</tr>
+                            <tr>
+<td class = 'word_transformation_td'>
+&nbsp;
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="vor">
+vor</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="-er">
+-er</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="vorer">
+vorer</span>
+</td>
+<td class = 'word_transformation_td'>
+                                    accept, accept, accept
+</td>
+</tr>
+                        </table>
+</div>
+</div>
+</div>
+
+<div class="gr_main_rule" id="gr_rule_4_1">
+                <h5>Negative particles ne' and nu'</h5>
+<div class="indent">
+The negative form is formed with the help of prefixes
+                    <span class="mandor_1" translate="ne'">nq'</span> or
+<span class="mandor_1" translate="nu'">n]'</span> before consonants sounds And
+<span class="mandor_1" translate="n'">n'</span> before vowels .</br>
+                    Prefixes are equivalent in use, but the option
+                    <span class="mandor_1" translate="ne'">nq'</span> common A little more .</br>
+<div class="example">
+                        Example :
+<table class = 'word_transformation'>
+<tr>
+<td class = 'word_transformation_th'>
+                                    console
+</td>
+<td class = 'word_transformation_th'>
+                                    root
+</td>
+<td class = 'word_transformation_th'>
+                                    ending
+</td>
+<td class = 'word_transformation_th'>
+                                    word
+</td>
+<td class = 'word_transformation_th'>
+                                    translation
+</td>
+</tr>
+<tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="ne'-">
+nq'-</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="kaan">
+kAn</span>
+</td>
+<td class = 'word_transformation_td'>
+&nbsp;
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="ne'kaan">
+nq'kAn</span>
+</td>
+<td class = 'word_transformation_td'>
+                                    non-combatant, civilian (n.)
+</td>
+                            </tr>
+<tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="nu'-">
+n]'-</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="am">
+am</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="-yc">
+-&x</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="nu'amyc">
+n]'am&x</span>
+</td>
+<td class = 'word_transformation_td'>
+                                    normal, habitual, ordinary, unchanging
+                                </td>
+</tr>
+<tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="n'-">
+n'-</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="epa">
+epa</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="-r">
+-r</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="n'epar">
+n'epar</span>
+</td>
+<td class = 'word_transformation_td'>
+                                    don't eat (verb)
+</td>
+</tr>
+                        </table>
+</div>
+</div>
+</div>
+
+<div class="gr_main_rule" id="gr_rule_4_2">
+                <h5>Particle of the opposite meaning noy'</h5>
+<div class="indent">
+negative particle
+<span class="mandor_1" translate="noy'">n\'</span> is used to denote
+opposite action. </br>In Russian, the combination can serve as an analogue
+prefixes "s-" and "raz-", for example, fold - expand.</br> Particle
+                    <span class="mandor_1" translate="noy'">n\'</span>
+                    usually applied to verbs, but other parts of speech can be formed from verbs.</br>
+</br>Words with a prefix of the opposite meaning can serve as synonyms for words that
+educated in a different way.
+<div class="example">
+Example :
+<table class = 'word_transformation'>
+<tr>
+<td class = 'word_transformation_th'>
+                                    word with noy'
+</td>
+<td class = 'word_transformation_th'>
+                                    synonym
+</td>
+<td class = 'word_transformation_th'>
+                                    translation
+</td>
+</tr>
+<tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="noy'tenn">
+n\'teN</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="haaranov'la">
+hAranov'la</span>
+</td>
+<td class = 'word_transformation_td'>
+                                    hidden, hidden, secret
+</td>
+</tr>
+                            <tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="noy'gotal'ur">
+n\'gotal']r</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="naastar">
+nAstar</span>
+</td>
+<td class = 'word_transformation_td'>
+                                    destroy
+</td>
+</tr>
+
+</table>
+</div>
+                </div>
+</div>
+
+<div class="gr_main_rule" id="gr_rule_5">
+<h5> Verbs </h5>
+<div class="indent">
+                    In the infinitive, verbs in Mando'a have the following endings:</br>
+- if the root word ends with a vowel, then the verb formed from the word ends with
+                    <span class="mandor_1" translate="-r">-r</span>;</br>
+                    - if the root word ends in a consonant, then a vowel is added at the end of the verb and
+                    <span class="mandor_1" translate="-r">-r</span>.</br>
+
+<div class="example">
+                        Example :
+<table class = 'word_transformation'>
+<tr>
+<td class = 'word_transformation_th'>
+                                    root
+</td>
+<td class = 'word_transformation_th'>
+                                    ending
+</td>
+<td class = 'word_transformation_th'>
+                                    word
+</td>
+<td class = 'word_transformation_th'>
+                                    translation
+</td>
+</tr>
+<tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="beten">
+bqten</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="-or">
+-or</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="betenor">
+bqtenor</span>
+</td>
+<td class = 'word_transformation_td'>
+                                    sigh, exhale
+</td>
+</tr>
+<tr>
+                                <td class = 'word_transformation_td'>
+<span class="mandor_2" translate="chak">
+cak</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="-ur">
+-]r</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="chakur">
+cak]r</span>
+</td>
+<td class = 'word_transformation_td'>
+                                    steal, rob
+</td>
+</tr>
+<tr>
+                                <td class = 'word_transformation_td'>
+<span class="mandor_2" translate="cyar">
+xar</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="-ir">
+-&r</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="cyarir">
+xar&r</span>
+</td>
+<td class = 'word_transformation_td'>
+                                    be in love
+</td>
+</tr>
+<tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="linii">
+l&nI</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="-r">
+-r</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="linir">
+l&n&r</span>
+</td>
+<td class = 'word_transformation_td'>
+                                    need
+</td>
+</tr>
+</table>
+</div>
+The most common ending is <span class="mandor_1" translate="-ir">-&r</span></br>
+If the root stem ends in the rune <span class="mandor_1" translate="-i">-i</span>,
+then in the verb ending it is transformed into a rune <span class="mandor_1" translate="-ii">-&</span></br>
+</br>
+In all verbs, the stress falls only on their verb ending.</br>
+Even if in other parts of speech formed from the same root, the stress is placed differently,</br>
+then in verbs the stress goes to the verb ending.</br>
+For example , <span class="mandor_1" translate="beten">bqten</span> <i>[BEY-tehn]</i> ( n ) and
+<span class="mandor_1" translate="betenor">bqtenor</span> <i>[bey-tehn-OHR]</i> ( v .)
+</div>
+</div>
+
+<div class="gr_main_rule" id="gr_rule_5_1">
+                <h5>Team inclination</h5>
+<div class="indent">
+In Mando'a, there are two types of verb moods.</br>
+An infinitive that can be correlated with the indicative mood in Russian.
+It is represented by the dictionary form of the word.</br>
+And the command inclination, with the help of which an order is formed, a team.
+In Russian, it corresponds to the imperative mood.</br></br>
+The command form of a verb is formed by putting it in the second person</br> and adding
+prefixes <span class="mandor_1" translate="ke'">ke'</span> before a consonant
+and <span class="mandor_1" translate="k'">k'</span> before vowel .
+</div>
+<div class='example'>
+                    Example :
+<table class = 'grammar_example_4'>
+<tr>
+<td class='grammar_example_4_th'>
+                                infinitive
+</td>
+<td class='grammar_example_4_th'>
+                                translation
+</td>
+<td class='grammar_example_4_th'>
+                                team
+</td>
+<td class='grammar_example_4_th'>
+                                translation
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_4_td'>
+<span class="mandor_2" translate="parer">parqr</span>
+</td>
+<td class = 'grammar_example_4_td'>
+                                wait
+</td>
+<td class = 'grammar_example_4_td'>
+<span class="mandor_2" translate="Ke'pare!">ke'parq!</span>
+</td>
+<td class = 'grammar_example_4_td'>
+                                Wait !
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_4_td'>
+<span class="mandor_2" translate="atiniir">at&n%r</span>
+</td>
+<td class = 'grammar_example_4_td'>
+                                endure , hold on
+</td>
+<td class = 'grammar_example_4_td'>
+<span class="mandor_2" translate="K'atinii!">k'at&n%!</span>
+</td>
+<td class = 'grammar_example_4_td'>
+                                Be patient! Hold on!
+</td>
+</tr>
+</table>
+                </div>
+</div>
+
+<div class="gr_main_rule" id="gr_rule_5_2">
+                <h5>Verb conjugation</h5>
+<div class="indent">
+In Mando'a, the verb has only two conjugations.</br>
+The indefinite is expressed by the infinitive and corresponds to the dictionary form of the word.</br>
+The personal form is formed by shortening the sound <span class="mandor_1" translate="-r">-r</span>
+in the verb ending.</br>
+The personal form does not change according to times, persons, genders and numbers. </br>
+An exception is a small group of archaic verbs.
+</div>
+<div class='example'>
+Example :
+<table class = 'grammar_example_4'>
+<tr>
+<td class='grammar_example_4_th'>
+                                infinitive
+</td>
+<td class='grammar_example_4_th'>
+                                translation
+</td>
+<td class='grammar_example_4_th'>
+                                personal form
+</td>
+<td class='grammar_example_4_th'>
+                                translation
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_4_td'>
+<span class="mandor_2" translate="akaanir">akAn&r</span>
+</td>
+<td class = 'grammar_example_4_td'>
+                                fight , fight
+</td>
+<td class = 'grammar_example_4_td'>
+<span class="mandor_2" translate="Ni akaani">ni akAn&</span>
+</td>
+<td class = 'grammar_example_4_td'>
+                                I fight
+</td>
+</tr>
+<tr>
+                            <td class = 'grammar_example_4_td'>
+<span class="mandor_2" translate="olaror">olaror</span>
+</td>
+<td class = 'grammar_example_4_td'>
+                                come, arrive, arrive
+</td>
+<td class = 'grammar_example_4_td'>
+                                <span class="mandor_2" translate="Kaysh olaro o'r ru'tuur">k[x olaro o'r r]'t}r</span>
+                            </td>
+<td class = 'grammar_example_4_td'>
+He arrived yesterday
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_4_td'>
+<span class="mandor_2" translate="nuhoyir">n]h\&r</span>
+</td>
+<td class = 'grammar_example_4_td'>
+sleep (hard)
+</td>
+<td class = 'grammar_example_4_td'>
+<span class="mandor_2" translate="Val nuhoyi">val n]h\&</span>
+</td>
+<td class = 'grammar_example_4_td'>
+They are fast asleep
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+<div class="gr_main_rule" id="gr_rule_5_3">
+<h5>Verb forms <span class="mandor_1" translate="cuyir">k;&r</span> (to be)</h5>
+<div class="indent">
+After the language reform carried out by Or'k Rask (
+<span class="mandor_1" translate="Or'ka Rusk">or'ka rask</span>), a Tong who lived in time
+Mandalore the Ultimate, there are almost no exceptions in verb conjugation in Mando'a.</br>
+When other races began to join the ranks of the Mandalorians, and the Mando'a began to
+speak not only tongs, mastering all the intricacies of the ancient language was too difficult
+for many of them.</br>
+Reform was required, and a number of simplifications and unifications were adopted in the new Mando'a.</br>
+But some exceptions turned out to be too tenacious, and the reform failed to overcome them.</br>
+The most important exception is the verb <span class="mandor_1" translate="cuyir">k;&r</span> - to be.
+</div>
+<div class='example'>
+<table class = 'grammar_example_4'>
+<tr>
+<td class = 'grammar_example_4_td'>
+<span class="mandor_2" translate="Ni cuy">ni k;</span>
+</td>
+<td class = 'grammar_example_4_td'>
+I am
+</td>
+<td class = 'grammar_example_4_td'>
+<span class="mandor_2" translate="Mhi cuy">mi k;</span>
+</td>
+<td class = 'grammar_example_4_td'>
+We are
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_4_td'>
+<span class="mandor_2" translate="Gar cuy">gar k;</span>
+</td>
+<td class = 'grammar_example_4_td'>
+you are
+</td>
+<td class = 'grammar_example_4_td'>
+<span class="mandor_2" translate="G'an cuy">g'an k;</span>
+</td>
+<td class = 'grammar_example_4_td'>
+you are
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_4_td'>
+<span class="mandor_2" translate="Kaysh cuyi">k[xk;&</span>
+</td>
+<td class = 'grammar_example_4_td'>
+he/she is
+</td>
+<td class = 'grammar_example_4_td'>
+<span class="mandor_2" translate="Val cuyi">val k;&</span>
+</td>
+<td class = 'grammar_example_4_td'>
+they are
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_4_td'>
+<span class="mandor_2" translate="Bic cuyi">bik k;&</span>
+</td>
+<td class = 'grammar_example_4_td'>
+it/it is
+</td>
+<td class = 'grammar_example_4_td'>
+&nbsp;
+</td>
+<td class = 'grammar_example_4_td'>
+&nbsp;
+</td>
+</tr>
+</table>
+</br>
+The verb <span class="mandor_1" translate="cuyir">k;&r</span> is most often omitted in speech
+and is used only as a qualifying word. </br>The meaning is usually clear from the context
+or, if necessary, can be conveyed via word order.
+</div>
+</div>
+
+<div class = 'gr_main_rule' id="gr_rule_5_4">
+<h5>Basic verb tenses</h5>
+<div class='indent'>
+The present tense of the verb is the most common, the most universal
+and the most dominant in the language. </br>If the time of the event can be specified in other words of the sentence
+or understood from the context, </br>then the present tense will be used to describe the action. </br>
+The present tense is expressed in the personal form of the verb and does not have any additional prefixes.</br></br>
+The past tense is formed by adding a prefix to the personal form of the verb
+<span class="mandor_1" translate="en'">r]'</span> for roots beginning with a consonant, </br>and
+prefixes <span class="mandor_1" translate="r'">r'</span> for roots that start with a vowel.
+</br></br>
+To form a verb in the future tense, a prefix is added to the verb in the personal form
+<span class="mandor_1" translate="ven'">ven'</span></br></br>
+</div>
+<div class='example'>
+Example:
+<table class = 'grammar_example_6'>
+<tr>
+<td class='grammar_example_6_th'>
+present time
+</td>
+<td class='grammar_example_6_th'>
+translation
+</td>
+<td class='grammar_example_6_th'>
+past tense
+</td>
+<td class='grammar_example_6_th'>
+translation
+</td>
+<td class='grammar_example_6_th'>
+Future tense
+</td>
+<td class='grammar_example_6_th'>
+translation
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Ni davaa koo'nar">ni davA k]'nar</span>
+</td>
+<td class = 'grammar_example_6_td'>
+I do my duty (by contract)
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Ni ru'davaa koo'nar">ni r]'davA k]'nar</span>
+</td>
+<td class = 'grammar_example_6_td'>
+I fulfilled my duty (under the contract)
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Ni ven'davaa koo'nar">ni ven'davA k]'nar</span>
+</td>
+<td class = 'grammar_example_6_td'>
+I will fulfill the duty (under the contract)
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Ban'dushe ami gar">ban'd]xq am& gar</span>
+</td>
+<td class = 'grammar_example_6_td'>
+Difficulties change you
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Ban'dushe r'ami gar">ban'd]xq r'am& gar</span>
+</td>
+<td class = 'grammar_example_6_td'>
+Difficulties have changed you
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Ban'dushe ven'ami gar">ban'd]xq ven'am& gar</span>
+</td>
+<td class = 'grammar_example_6_td'>
+Difficulties will change you
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+<div class = 'gr_main_rule' id="gr_rule_5_5">
+<h5>Passive</h5>
+<div class='indent'>
+Mando'a is an active language. The Mandalorian is more likely to construct a sentence using direct word order,
+from subject to object.</br>
+But there are times when passive voice is indispensable. Such phrases are used much less often, and
+or when it is necessary to emphasize in a special way precisely the passive nature of the action,
+or when the subject is clear from the context and is omitted from the sentence.
+</br></br>
+The passive voice is built from the object to the subject and a particle is placed in front of the subject
+<span class="mandor_1" translate="de">de</span>.</br>
+In modern Mando'a, the particle <span class="mandor_1" translate="de">de</span> is a preposition,
+but in archaic texts this particle acts as a prefix and is included in the word.</br></br>
+The very impact on the object can be expressed in two equivalent and equally used ways.</br></br>
+<i>Method 1.</i> </br>
+suffix <span class="mandor_1" translate="'bar">'bar</span>.</br>
+To form a personal form of a verb in the passive voice,
+<span class="mandor_1" translate="-r">-r</span> is dropped already from the verb suffix.</br>
+This way of forming the passive voice can only be applied to verbs.
+
+</br></br>
+<i>Method 2.</i> </br> The prefix is used to form the passive voice with the verb
+<span class="mandor_1" translate="cuy'">k;'</span> </br> or auxiliary verb
+<span class="mandor_1" translate="cuyir">k;&r</span> (to be), which is put in the same person and number,
+which is the object.
+</br></br>
+Example
+<table class="grammar_example_4">
+<tr>
+<td colspan="2" class="grammar_example_4_th">active form: subject => action => object</td>
+<td colspan="2" class="grammar_example_4_th">passive form: object <= action <= subject</td>
+</tr>
+<tr>
+<td class="grammar_example_4_td">
+<span class="mandor_2" translate="Ash'ade ru'taap'tayli ori'me'sen">
+ax'adq r]'tAp't[l& or&'mq'sen</span>
+</td>
+<td class="grammar_example_4_td">Someone took over the cruiser</td>
+<td class="grammar_example_4_td">
+<span class="mandor_2" translate="Ori'me'sen ru'taap'tayliba (d'ash'ade)">
+or&'mq'sen r]'tAp't[l&ba (d'ax'adq)</span>
+</td>
+<td class="grammar_example_4_td">Cruiser captured by </br>(someone) </br>
+<i style="color:SlateGrey">method 1</i></td>
+</tr>
+<tr>
+<td class="grammar_example_4_td">
+<span class="mandor_2" translate="Kaysh ru'susulu ni">k[xr]'s]s]l] ni</span>
+</td>
+<td class="grammar_example_4_td">He heard me</td>
+<td class="grammar_example_4_td">
+<span class="mandor_2" translate="Ni cuy ru'susulur de kaysh">
+nik; r]'s]s]l]r de k[x</span>
+</td>
+<td class="grammar_example_4_td">I was heard by him</br>
+<i style="color:SlateGrey">method 2, 1st person</i></td>
+</tr>
+<tr>
+<td class="grammar_example_4_td">
+<span class="mandor_2" translate="Oriya hetti">
+or&ya heT&</span>
+</td>
+<td class="grammar_example_4_td">The city is on fire</td>
+<td class="grammar_example_4_td">
+<span class="mandor_2" translate="Oriya cuyi hettir (d'ash'ade)">
+or&ya k;& heT&r (d'ax'adq)</span>
+</td>
+<td class="grammar_example_4_td">City being burned down (by someone)</br>
+<i style="color:SlateGrey">method 2, 3rd person</i></td>
+</tr>
+</table>
+</div>
+</div>
+
+<div class = 'gr_main_rule' id="gr_rule_5_6">
+<h5>Modal prefixes</h5>
+<div class='indent'>
+The use of modal prefix verbs in modern Mando'a carries some
+ritual and archaic coloring. </br>Modal prefix verbs emphasize the special importance of the phrase,
+in which they are present.</br></br>
+Stylistically, modal prefix verbs are most often used in official speech, </br>but sometimes
+they can be heard in everyday language. </br>However, in everyday language, the same thoughts are often expressed
+words with less pathos, simpler.
+</br></br>
+In the basic version, when a modal verb is attached to a semantic one, the modal verb
+acts as a prefix.</br>
+But if the modal verb is in negative or interrogative form and is joined to
+corresponding prefixes, </br> then it turns into an independent word and is used separately
+from the semantic verb, located immediately before it.</br></br>
+
+
+<table class="grammar_example_7">
+<tr>
+<td colspan="2" class="grammar_example_7_th">basic form</td>
+<td rowspan="2" class="grammar_example_7_th">translation</td>
+<td rowspan="2" class="grammar_example_7_th">negative</br>form</td>
+<td rowspan="2" class="grammar_example_7_th">translation</td>
+<td rowspan="2" class="grammar_example_7_th">question-</br>form</td>
+<td rowspan="2" class="grammar_example_7_th">translation</td>
+</tr>
+<tr>
+<td class="grammar_example_7_th2">before</br>vowel</td>
+<td class="grammar_example_7_th2">before</br>acc</td>
+</tr>
+<tr>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="ent'">ent'</span>
+</td>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="ente'">ente'</span>
+</td>
+<td class="grammar_example_7_td">must, must</td>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="n'ente">n'ente</span>
+</td>
+<td class="grammar_example_7_td">shouldn't, mustn't</td>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="tion'ente">t&on'ente</span>
+</td>
+<td class="grammar_example_7_td">should, must</td>
+</tr>
+<tr>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="vegyc'">veg&x'</span>
+</td>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="vegyce'">veg&xe'</span>
+</td>
+<td class="grammar_example_7_td">a need to do something in the future</td>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="ne'vegyc">nq'veg&x</span>
+</td>
+<td class="grammar_example_7_td">no need to do anything in the future</td>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="tion'vegyc">t&on'veg&x</span>
+</td>
+<td class="grammar_example_7_td">Does something need to be done in the future</td>
+</tr>
+<tr>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="ret'">ret'</span>
+</td>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="reta'">retu'</span>
+</td>
+<td class="grammar_example_7_td">possibility to do something in the past</td>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="ne'ret">nq'ret</span>
+</td>
+<td class="grammar_example_7_td">inability to do something in the past</td>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="tion'ret">t&on'ret</span>
+</td>
+<td class="grammar_example_7_td">was it possible to do something in the past</td>
+</tr>
+<tr>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="gyc'">g&x'</span>
+</td>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="gyce'">g&xe'</span>
+</td>
+<td class="grammar_example_7_td">intention to do something in the future</td>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="ne'gyc">nq'g&x</span>
+</td>
+<td class="grammar_example_7_td">intention not to do something in the future</td>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="tion'gyc">t&on'g&x</span>
+</td>
+<td class="grammar_example_7_td">do you intend to do something in the future</td>
+</tr>
+<tr>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="duur'">d}r'</span>
+</td>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="duu'">d}'</span>
+</td>
+<td class="grammar_example_7_td">expresses permission</td>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="nu'duur">n]'d}r</span>
+</td>
+<td class="grammar_example_7_td">expresses forbidden, </br>not allowed</td>
+<td class="grammar_example_7_td">
+<span class="mandor_2" translate="tion'duur">t&on'd}r</span>
+</td>
+<td class="grammar_example_7_td">Is it allowed</br>to do something</td>
+</tr>
+</table>
+</br></br>
+Example
+<table class = 'grammar_example_6'>
+<tr>
+<td class='grammar_example_6_th'>
+base form
+</td>
+<td class='grammar_example_6_th'>
+translation
+</td>
+<td class='grammar_example_6_th'>
+negative form
+</td>
+<td class='grammar_example_6_th'>
+translation
+</td>
+<td class='grammar_example_6_th'>
+interrogative form
+</td>
+<td class='grammar_example_6_th'>
+translation
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Gar ent'ara'novo kaysh">gar ent'ara'novo k[x</span>
+</td>
+<td class = 'grammar_example_6_td'>
+You must protect him
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Gar n'ente ara'novo kaysh">gar n'ente ara'novo k[x</span>
+</td>
+<td class = 'grammar_example_6_td'>
+You don't have to protect him.
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Tion'ente gar ara'novo kaysh?">t&on'ente gar ara'novo k[x?</span>
+</td>
+<td class = 'grammar_example_6_td'>
+Should you protect him?
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Gar vegyc'ara'novo kaysh">gar veg&x'ara'novo k[x</span>
+</td>
+<td class = 'grammar_example_6_td'>
+You need to protect him
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Gar ne'vegyc ara'novo kaysh">gar nq'veg&x ara'novo k[x</span>
+</td>
+<td class = 'grammar_example_6_td'>
+You don't need to protect him.
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Tion'vegyc gar ara'novo kaysh?">t&on'veg&x gar ara'novo k[x?</span>
+</td>
+<td class = 'grammar_example_6_td'>
+Do you need to protect him?
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Gar ret'ara'novo kaysh">gar ret'ara'novo k[x</span>
+</td>
+<td class = 'grammar_example_6_td'>
+You could protect him
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Gar ne'ret ara'novo kaysh">gar nq'ret ara'novo k[x</span>
+</td>
+<td class = 'grammar_example_6_td'>
+You couldn't protect him
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Tion'ret gar ara'novo kaysh?">t&on'ret gar ara'novo k[x?</span>
+</td>
+<td class = 'grammar_example_6_td'>
+Could you protect him?
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Gar gyc'ara'novo kaysh">gar g&x'ara'novo k[x</span>
+</td>
+<td class = 'grammar_example_6_td'>
+You will protect him
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Gar ne'gyc ara'novo kaysh">gar nq'g&x ara'novo k[x</span>
+</td>
+<td class = 'grammar_example_6_td'>
+Will you protect him?
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Tion'gyc gar ara'novo kaysh?">t&on'g&x gar ara'novo k[x?</span>
+</td>
+<td class = 'grammar_example_6_td'>
+Will you protect him?
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Gar duur'ara'novo kaysh">gar d}r'ara'novo k[x</span>
+</td>
+<td class = 'grammar_example_6_td'>
+You can protect him
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Gar nu'duur ara'novo kaysh">gar n]'d}r ara'novo k[x</span>
+</td>
+<td class = 'grammar_example_6_td'>
+You can't defend him
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="Tion'duur gar ara'novo kaysh?">t&on'd}r gar ara'novo k[x?</span>
+</td>
+<td class = 'grammar_example_6_td'>
+Can you protect him?
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+<div class = 'gr_main_rule' id="gr_rule_6">
+<h5>Adjectives</h5>
+<div class='indent'>
+Adjectives in Mando'a have two common endings
+<span class="mandor_1" translate="-la">-la</span> or
+<span class="mandor_1" translate="-yc">-&x</span>.</br></br>
+However, most adjectives do not have any endings.</br>
+Morphologically, they do not differ from nouns,</br>
+and that these are adjectives can only be understood by their role in the sentence.</br></br>
+
+Before ending <span class="mandor_1" translate="-yc">-&x</span>,
+and in archaic words and before the end
+<span class="mandor_1" translate="-la">-la</span>,
+beiten sign <span class="mandor_1" translate="'">'</span>
+usually not set.
+<div class='example'>
+Example:
+<table class = 'grammar_example_6'>
+<tr>
+<td class='grammar_example_6_th'>
+ending </br><span class="mandor_1" translate="-la">-la</span>
+</td>
+<td class='grammar_example_6_th'>
+translation
+</td>
+<td class='grammar_example_6_th'>
+ending </br><span class="mandor_1" translate="-yc">-&x</span>
+</td>
+<td class='grammar_example_6_th'>
+translation
+</td>
+<td class='grammar_example_6_th'>
+without</br>ending
+</td>
+<td class='grammar_example_6_th'>
+translation
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="novor'la">novor'la</span>
+</td>
+<td class = 'grammar_example_6_td'>
+protected, impregnable
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="verd'yc">vqrd'&x</span>
+</td>
+<td class = 'grammar_example_6_td'>
+aggressive</br>(in a positive way)
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="ne'tra">nq'tra</span>
+</td>
+<td class = 'grammar_example_6_td'>
+black
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="shuk'la">x]k'la</span>
+</td>
+<td class = 'grammar_example_6_td'>
+broken,</br>broken to pieces
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="ret'yc">ret'&x</span>
+</td>
+<td class = 'grammar_example_6_td'>
+possible
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="pakod">pakod</span>
+</td>
+<td class = 'grammar_example_6_td'>
+simple, easy
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="ruusala">r}sala</span>
+</td>
+<td class = 'grammar_example_6_td'>
+gullible, gullible
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="haryc">har&x</span>
+</td>
+<td class = 'grammar_example_6_td'>
+tired
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="serim">ser&m</span>
+</td>
+<td class = 'grammar_example_6_td'>
+accurate, true
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="oriyala">or&yala</span>
+</td>
+<td class = 'grammar_example_6_td'>
+urban
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="caburyc">kab]r&x</span>
+</td>
+<td class = 'grammar_example_6_td'>
+caring
+</td>
+<td class = 'grammar_example_6_td'>
+<span class="mandor_2" translate="veman">veman</span>
+</td>
+<td class = 'grammar_example_6_td'>
+real, genuine
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<div class = 'gr_main_rule' id="gr_rule_6_1">
+<h5>Comparative adjective</h5>
+<div class='indent'>
+The comparative form of an adjective is formed by adding an ending to the full form of the adjective
+<span class="mandor_1" translate="-shya">-x&a</span> .</br></br>
+If the adjective ends in <span class="mandor_1" translate="-la">-la</span> or
+<span class="mandor_1" translate="-yc">-&x</span> and it is separated from the root by a beiten
+<span class="mandor_1" translate="'">'</span>, </br> then the beiten on the letter is shifted to separate
+second ending <span class="mandor_1" translate="-shya">-x&a</span>
+from the full form of the adjective.</br></br>
+In this way of transforming adjectives, quite a lot of exceptions have been preserved. </br>For example,
+in the words <span class="mandor_1" translate="ori'shya">or&'x&a</span> or
+<span class="mandor_1" translate="dushishya">d]x&x&a</span> can be seen
+that the archaic ways of forming a comparative form were more diverse.</br></br>
+<div class="example">
+Example:
+<table class = 'word_transformation'>
+<tr>
+<td class = 'word_transformation_th'>
+adjective
+</td>
+<td class = 'word_transformation_th'>
+ending
+</td>
+<td class = 'word_transformation_th'>
+comparative form
+</td>
+<td class = 'word_transformation_th'>
+translation
+</td>
+</tr>
+<tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="jahaala">
+jahAla</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="-'shya">
+-'x&a</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="jahaala'shya">
+jahAla'x&a</span>
+</td>
+<td class = 'word_transformation_td'>
+healthy => healthier
+</td>
+</tr>
+<tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="yaim'la">
+y[m'la</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="-'shya">
+-'x&a</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="yaimla'shya">
+y[mla'x&a</span>
+</td>
+<td class = 'word_transformation_td'>
+comfortable => more comfortable
+</td>
+</tr>
+<tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="ivin'yc">
+&v%n'&x</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="-'shya">
+-'x&a</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="iviinyc'shya">
+&v%n&x'x&a</span>
+</td>
+<td class = 'word_transformation_td'>
+fast => faster
+</td>
+</tr>
+<tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="oryc">
+or&x</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="-'shya">
+-'x&a</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="ori'shya">
+or&'x&a</span>
+</td>
+<td class = 'word_transformation_td'>
+big => more
+</td>
+</tr>
+<tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="dush">
+d]x</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="-'shya">
+-'x&a</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="dushishya">
+d]x&x&a</span>
+</td>
+<td class = 'word_transformation_td'>
+bad => worse
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<div class = 'gr_main_rule' id="gr_rule_6_2">
+<h5>A superlative adjective</h5>
+<div class='indent'>
+The superlative form of the adjective is formed in a manner similar to the formation
+comparative form, </br>only the ending is added to the full form of the adjective
+<span class="mandor_1" translate="-ne">-nq</span> .</br></br>
+If the adjective ends in <span class="mandor_1" translate="-la">-la</span> or
+<span class="mandor_1" translate="-yc">-&x</span> and it is separated from the root by a beiten
+<span class="mandor_1" translate="'">'</span>, </br> then the beiten on the letter is shifted to separate
+second ending <span class="mandor_1" translate="-ne">-nq</span>
+from the full form of the adjective.</br></br>
+Archaic exceptions also survived in the way of constructing the superlative form of adjectives.
+</br></br>
+<div class="example">
+Example:
+<table class = 'word_transformation'>
+<tr>
+<td class = 'word_transformation_th'>
+adjective
+</td>
+<td class = 'word_transformation_th'>
+ending
+</td>
+<td class = 'word_transformation_th'>
+comparative form
+</td>
+<td class = 'word_transformation_th'>
+translation
+</td>
+</tr>
+<tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="jahaala">
+jahAla</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="-'ne">
+-'nq</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="jahaala'ne">
+jahAla'nq</span>
+</td>
+<td class = 'word_transformation_td'>
+healthy => healthiest
+</td>
+</tr>
+<tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="yaim'la">
+y[m'la</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="-'ne">
+-'nq</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="yaimla'ne">
+y[mla'nq</span>
+</td>
+<td class = 'word_transformation_td'>
+comfortable = most comfortable
+</td>
+</tr>
+<tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="ivin'yc">
+&v%n'&x</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="-'ne">
+-'nq</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="iviinyc'ne">
+&v%n&x'nq</span>
+</td>
+<td class = 'word_transformation_td'>
+fast => fastest
+</td>
+</tr>
+<tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="oryc">
+or&x</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="-'ne">
+-'nq</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="orycne">
+or&xnq</span>
+</td>
+<td class = 'word_transformation_td'>
+large => largest
+</td>
+</tr>
+<tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="dush">
+d]x</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="-'ne">
+-'nq</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="dushne">
+d]xnq</span>
+</td>
+<td class = 'word_transformation_td'>
+bad => worst
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<div class = 'gr_main_rule' id="gr_rule_7">
+<h5>Unions</h5>
+<div class='indent'>
+<table class="unions">
+<tr>
+<td class = 'unions_th'>
+union
+</td>
+<td class = 'unions_th'>
+translation
+</td>
+<td class = 'unions_th'>
+example
+</td>
+<td class = 'unions_th'>
+translation
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="adu">ad]</span>
+</td>
+<td class = 'unions_td'>
+who, who
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Ni kar'mi burc'ya adu ven'gaa'tayli gar">
+ni kar'm& b]rx'a ad] ven'gA't[l& gar</span>
+</td>
+<td class = 'unions_td'>
+I know one guy who will help you
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="meg, megin">mqg, mqgin</span>
+</td>
+<td class = 'unions_td'>
+what, which
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Ni kar'tayli meg gar copaani narir ti kaysh">
+ni kar't[l& mqg gar kopAn& nar&r ti k[x</span>
+</td>
+<td class = 'unions_td'>
+I know what he wants to do with them
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="beh">beh</span>
+</td>
+<td class = 'unions_td'>
+oh oh
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Ke'rejorhaa'i ni beh gar aliit">
+ke'rejorhA'& ni beh gar al%t</span>
+</td>
+<td class = 'unions_td'>
+Tell me about your clan
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="boru">bor]</span>
+</td>
+<td class = 'unions_td'>
+how, in what way
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Kaysh ne'suvari boru kaysh ru'oyacyi">
+k[x nq's]var& bor] k[xr]'\ax&</span>
+</td>
+<td class = 'unions_td'>
+He did not understand how they survived
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="jor">jor</span>
+</td>
+<td class = 'unions_td'>
+why, why
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Kaysh nuho jor kayst hari">
+k[xn]ho jor k[st har&</span>
+</td>
+<td class = 'unions_td'>
+He sleeps because he is tired
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="meh">mq</span>
+</td>
+<td class = 'unions_td'>
+If
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Ni gyce'kyr'amu meh gar ve'nari bic">
+ni g&xe'k&r'am] mq gar ve'nar& bik</span>
+</td>
+<td class = 'unions_td'>
+I will kill you if you do this.
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="tuu">t}</span>
+</td>
+<td class = 'unions_td'>
+When
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Ke'tracy'a tuu ni naumiiti!">
+ke'trax&'at} ni na]m%t&!</span>
+</td>
+<td class = 'unions_td'>
+Shoot when I give the signal!
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="vai">v[</span>
+</td>
+<td class = 'unions_td'>
+where, from where
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Kaysh yaimpa ogir vai briikari me'sen">
+k[xy[mpa ogir v[ br%kar& mq'sen</span>
+</td>
+<td class = 'unions_td'>
+He returned to where he hid the spaceship
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="par">par</span>
+</td>
+<td class = 'unions_td'>
+for to
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Kaysh ba'slana par tegaanali vode">
+k[x ba'slana par tqgAnal& vodq</span>
+</td>
+<td class = 'unions_td'>
+He retreated to save his brothers
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+<div class = 'gr_main_rule' id="gr_rule_10">
+<h5>Offer</h5>
+<div class='indent'>
+The word order in the basic sentence form is direct and fixed:</br>
+subject => predicate => object => circumstance</br></br>
+Mando'a almost always uses full sentences.</br>
+In rare exceptions, when the actor is unknown, the subject may be omitted.</br></br>
+<div class="example">
+Example:
+<table class = 'word_transformation'>
+<tr>
+<td class = 'word_transformation_th'>
+subject
+</td>
+<td class = 'word_transformation_th'>
+predicate
+</td>
+<td class = 'word_transformation_th'>
+addition
+</td>
+<td class = 'word_transformation_th'>
+circumstance
+</td>
+<td class = 'word_transformation_th'>
+translation
+</td>
+</tr>
+<tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="Kaysh">
+k[x</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="pare">
+parq</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="ni">
+ni</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="o'r ven'tuur">
+o'r ven't}r</span>
+</td>
+<td class = 'word_transformation_td'>
+He is waiting for me tomorrow
+</td>
+</tr>
+<tr>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="(Ash'ade)">
+(ax'adq)</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="ru'chaku">
+r]'cak]</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="kaysh">
+k[x</span>
+</td>
+<td class = 'word_transformation_td'>
+<span class="mandor_2" translate="or kurs">
+or k]rs</span>
+</td>
+<td class = 'word_transformation_td'>
+He was robbed in the forest
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<div class = 'gr_main_rule' id="gr_rule_10_1">
+<h5>Subject</h5>
+<div class='indent'>
+The subject, actor or subject, is the main member of the sentence.</br>
+Most often, the subject in Mando'a is a noun, pronoun, or numeral.</br>
+In rare cases, the subject can be expressed by a phrase and even by the infinitive of the verb.</br></br>
+
+<div class="example">
+Example:
+<table class='subject'>
+<tr>
+<td class='subject_th'>
+Part of speech
+</td>
+<td class='subject_th'>
+subject
+</td>
+<td class='subject_th'>
+offer
+</td>
+<td class='subject_th'>
+translation
+</td>
+</tr>
+<tr>
+<td class='subject_td1'>
+pronoun
+</td>
+<td class='subject_td'>
+<span class="mandor_2" translate="Kaysh">
+k[x</span>
+</td>
+<td class='subject_td'>
+<span class="mandor_2" translate="Kaysh tsikado besbe par sol'akaan">
+k[x ts&kado besbq par sol'akAn</span>
+</td>
+<td class='subject_td2'>
+He prepares equipment for battle
+</td>
+</tr>
+<tr>
+<td class='subject_td1'>
+noun
+</td>
+<td class='subject_td'>
+<span class="mandor_2" translate="Tra'gaal">
+tra'gAl</span>
+</td>
+<td class='subject_td'>
+<span class="mandor_2" translate="Tra'gaal yaimpa at ori'sen">
+tra'gAl y[mpa at or&'sen</span>
+</td>
+<td class='subject_td2'>
+Combat fighter returned to the cruiser
+</td>
+</tr>
+<tr>
+<td class='subject_td1'>
+verb</br>(in infinitive)
+</td>
+<td class='subject_td'>
+<span class="mandor_2" translate="Ara'novor">
+ara'novor</span>
+</td>
+<td class='subject_td'>
+<span class="mandor_2" translate="Ara'novor aliit - ali'nar par mando'ad">
+ara'novor al%t - al&'nar par mando'ad</span>
+</td>
+<td class='subject_td2'>
+Protecting the clan (family) is a duty for a Mandalorian
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<div class = 'gr_main_rule' id="gr_rule_10_2">
+<h5>Simple predicate</h5>
+<div class='indent'>
+A simple predicate is expressed by a verb and describes the action
+which the subject performs on the object.</br></br>
+Negation is placed directly to the verb.</br></br>
+
+<div class="example">
+Example:
+<table class = 'grammar_example'>
+<tr>
+<td class = 'grammar_example_td'>
+<span class="mandor_2" translate="Ni hari">
+ni har&</span>
+</td>
+<td class = 'grammar_example_td'>
+I'm tired
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_td'>
+<span class="mandor_2" translate="Ni ne'hari">
+ni nq'har&</span>
+</td>
+<td class = 'grammar_example_td'>
+I am not tired
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<div class = 'gr_main_rule' id="gr_rule_10_3">
+<h5>Compound predicate</h5>
+<div class='indent'>
+A compound predicate consists of two verbs: </br> the main verb, standing in a personal form,
+and a clarifying verb in the infinitive.</br></br>
+Negation can be put both to the main verb and to the clarifying one.</br></br>
+Between the main and the qualifying verb there can be an adjective in a comparative form,</br>
+which indicates a special characteristic of the qualifying verb.
+</br></br>
+
+<div class="example">
+Example:
+<table class = 'grammar_example'>
+<tr>
+<td class = 'grammar_example_td'>
+<span class="mandor_2" translate="Ni copaani epar">
+ni kopAn&epar</span>
+</td>
+<td class = 'grammar_example_td'>
+I want to eat
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_td'>
+<span class="mandor_2" translate="Ni ne'copaani epar">
+ni nq'kopAn&epar</span>
+</td>
+<td class = 'grammar_example_td'>
+I do not want to eat
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_td'>
+<span class="mandor_2" translate="Ni copaani n'epar al nuhor">
+ni kopAn& n'epar al n]hor</span>
+</td>
+<td class = 'grammar_example_td'>
+I don't want to eat, but sleep
+</td>
+</tr>
+<tr>
+<td class = 'grammar_example_td'>
+<span class="mandor_2" translate="Ni copaani nuhor ori'shya me epar">
+ni kopAn& n]hor or&'x&a me epar</span>
+</td>
+<td class = 'grammar_example_td'>
+I want to sleep more than eat
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<div class = 'gr_main_rule' id="gr_rule_10_7">
+<h5>Interrogative form</h5>
+<div class='indent'>
+With the interrogative prefix <span class="mandor_1" translate="Tion'">t&on'</span>
+a statement can be turned into a question.</br></br>
+In this case, the word to which the question refers, together with the prefix
+<span class="mandor_1" translate="Tion'">t&on'</span> moves to the beginning of the sentence.</br></br>
+
+<div class="example">
+Example:
+<table class='subject'>
+<tr>
+<td class='subject_th'>
+offer type
+</td>
+<td class='subject_th'>
+question word
+</td>
+<td class='subject_th'>
+offer
+</td>
+<td class='subject_th'>
+translation
+</td>
+</tr>
+<tr>
+<td class='subject_td1'>
+affirmative</br>proposal
+</td>
+<td class='subject_td'>
+&nbsp;
+</td>
+<td class='subject_td'>
+<span class="mandor_2" translate="Mhi hibira mando'a iviin'yc">
+mi h&b&ra mando'a &v%n'&x</span>
+</td>
+<td class='subject_td2'>
+We learn mando'a fast
+</td>
+</tr>
+<tr>
+<td class='subject_td1'>
+question to subject
+</td>
+<td class='subject_td'>
+<span class="mandor_2" translate="Tion'mhi">
+t&on'mi</span>
+</td>
+<td class='subject_td'>
+<span class="mandor_2" translate="Tion'mhi hibira mando'a iviin'yc?">
+t&on'mi h&b&ra mando'a &v%n'&x?</span>
+</td>
+<td class='subject_td2'>
+<i style="font-size:110%">Are we</i> learning Mando quickly?
+</td>
+</tr>
+<tr>
+<td class='subject_td1'>
+question to the predicate
+</td>
+<td class='subject_td'>
+<span class="mandor_2" translate="Tion'hibira">
+t&on'h&b&ra</span>
+</td>
+<td class='subject_td'>
+<span class="mandor_2" translate="Tion'hibira mhi mando'a iviin'yc?">
+t&on'h&b&ra mi mando'a &v%n'&x?</span>
+</td>
+<td class='subject_td2'>
+<i style="font-size:110%">Learning</i> are we Mando fast?
+</td>
+</tr>
+<tr>
+<td class='subject_td1'>
+question for addition
+</td>
+<td class='subject_td'>
+<span class="mandor_2" translate="Tion'mando'a">
+t&on'mando'a</span>
+</td>
+<td class='subject_td'>
+<span class="mandor_2" translate="Tion'mando'a mhi hibira iviin'yc?">
+t&on'mando'a mi h&b&ra &v%n'&x?</span>
+</td>
+<td class='subject_td2'>
+<i style="font-size:105%">Mando'a</i> are we learning quickly?
+</td>
+</tr>
+<tr>
+<td class='subject_td1'>
+question to circumstance
+</td>
+<td class='subject_td'>
+<span class="mandor_2" translate="Tion'iviin'yc">
+t&on'&v%n'&x</span>
+</td>
+<td class='subject_td'>
+<span class="mandor_2" translate="Tion'iviin'yc mhi hibira mando'a?">
+t&on'&v%n'&x mi h&b&ra mando'a?</span>
+</td>
+<td class='subject_td2'>
+<i style="font-size:110%">Quick</i> are we learning Mando?
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<div class = 'gr_main_rule' id="gr_rule_10_8">
+<h5>Question words</h5>
+<div class='indent'>
+In addition to the universal interrogative prefix <span class="mandor_1" translate="Tion'">t&on'</span>
+Mando'a uses a series of interrogative words to specify a question.
+</br></br>
+
+<div class="example">
+Example:
+<table class="unions">
+<tr>
+<td class = 'unions_th'>
+interrogative</br>word
+</td>
+<td class = 'unions_th'>
+translation
+</td>
+<td class = 'unions_th'>
+example
+</td>
+<td class = 'unions_th'>
+translation
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="tion'ad">t&on'ad</span>
+</td>
+<td class = 'unions_td'>
+Who?
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Tion'ade ru'naasta keldab?">
+t&on'adq r]'nAsta keldab?</span>
+</td>
+<td class = 'unions_td'>
+Who destroyed the citadel?
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="tion'meg">t&on'mqg</span>
+</td>
+<td class = 'unions_td'>
+What?
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Tion'meg gar suri?">
+t&on'mqg gar s]r&?</span>
+</td>
+<td class = 'unions_td'>
+What do you see?
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="tion'tuur">t&on't}r</span>
+</td>
+<td class = 'unions_td'>
+When?
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Tion'tuur gar yaimpa at yaim'dab'ika?">
+t&on't}r gar y[mpa at y[m'dab'iku?</span>
+</td>
+<td class = 'unions_td'>
+When are you returning to camp?
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="tion'vaii">t&on'v[i</span>
+</td>
+<td class = 'unions_td'>
+Where?
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Tion'vaii gar digu tracy'kaan?">
+t&on'v[i gar d&g] trax&'kAn?</span>
+</td>
+<td class = 'unions_td'>
+Where did you forget the flamethrower?
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="tion'jor">t&on'jor</span>
+</td>
+<td class = 'unions_td'>
+Why?
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Tion'jor ni ne'kar'tayli ibic?">
+t&on'jor ni nq'kar't[l& ibik?</span>
+</td>
+<td class = 'unions_td'>
+Why don't I know this?
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="tion'solet">t&on'solet</span>
+</td>
+<td class = 'unions_td'>
+How many?
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Tion'solet mu'naryc ni su'pare?">
+t&on'solet m]'nar&x ni s]'parq?</span>
+</td>
+<td class = 'unions_td'>
+How much longer do I have to wait?
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="tion'bor">t&on'bor</span>
+</td>
+<td class = 'unions_td'>
+How? how?
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Tion'bor yust mhi gyce'slana?">
+t&on'bor y]st mi g&xe'slana?</span>
+</td>
+<td class = 'unions_td'>
+Which route do we want to take?
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="tion'meh">t&on'mq</span>
+</td>
+<td class = 'unions_td'>
+what if?
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Tion'meh gar n'olaro?">
+t&on'mq gar n'olaro?</span>
+</td>
+<td class = 'unions_td'>
+What if he doesn't come?
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="tion'beh">t&on'beh</span>
+</td>
+<td class = 'unions_td'>
+What about?
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Tion'beh hailir cetare?">
+t&on'beh h[l&r setarq?</span>
+</td>
+<td class = 'unions_td'>
+What about to eat?
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="tion'tan">t&on'tan</span>
+</td>
+<td class = 'unions_td'>
+Which?
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Tion'tan isir gana ibic tihaar?">
+t&on'tan &sir gana ibik t&hAr?</span>
+</td>
+<td class = 'unions_td'>
+What does this fruit brandy taste like?
+</td>
+</tr>
+<tr>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="tion'par">t&on'par</span>
+</td>
+<td class = 'unions_td'>
+For what? For what?
+</td>
+<td class = 'unions_td'>
+<span class="mandor_2" translate="Tion'par gar ru'chaabi ba'buir?">
+t&on'par gar r]'cAb& ba'b;ir?</span>
+</td>
+<td class = 'unions_td'>
+Why did you scare grandma?
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends 'dictionary/base_design.html' %}
+
+{% block title %}Словарь{% endblock %}
+
+{% block navigat1 %}
+<a href="{% url 'home' %}" class="a_nav">Словарь</a> |
+| <a href="{% url 'grammar' %}" class="a_nav">Грамматика</a> |
+| <a href="{% url 'about_us' %}" class="a_nav">О нас</a>
+{% endblock %}
+
+{% block underline %}
+    <table class="nav_lang">
+        <tr>
+            <td class="rus_eng">
+                <a href="{% url 'home' %}" class="a_link">
+                    <div class="lang_underline">
+                        <div class="align_lg">r]S'a</div>
+                        <div class="add_text_lg">РУС</div>
+                    </div>
+                </a>
+            </td>
+            <td class="rus_eng">
+                <a href="{% url 'home_eng' %}" class="a_link">
+                    <div>
+                        <div class="align_lg">engle'a</div>
+                        <div class="add_text_lg">ENG</div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="button_login"></button>
+            </td>
+        </tr>
+    </table>
+{% endblock %}
+
+{% block aside %}
+        <h3 class="options">Параметры</h3>
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button name="page" value="main" type="submit" class="submit-bottom">
+                    <div class="align">ke'mar'q&</div>
+                    <div class="add-label">ИСКАТЬ</div>
+                </button>
+            </form>
+
+
+{% endblock %}
+{% block content %}
+         <div class="features">
+            <table class = 'resp_dict_ext'>
+                <tr>
+                        <th>Мандо'а</th>
+                        <th>Транскрипция</th>
+                        <th>Русский</th>
+                        <th>Часть речи</th>
+                        <th>Мандор</th>
+                        <th>Канон</th>
+                </tr>
+                <tr>
+                    <td colspan=7>
+                        {% if words %}
+                        {% for el in words %}
+                            <table class = 'resp_dict_inn'>
+                                <tr>
+                                    <td>{{ el.mandoa }}</td>
+                                    <td>[{{ el.pronunciation }}]</td>
+                                    <td>{{ el.russian|safe }}</td>
+                                    <td>{{ el.part_of_speech_ru }}</td>
+                                    <td>{{ el.written }}</td>
+                                    <td>{{ el.canon }}</td>
+                                </tr>
+                            </table>
+                        {% endfor %}
+                        {% else %}
+                        <p>Слово не найдено</p>
+                        {% endif %}
+                    </td>
+                </tr>
+             </table>
+        </div>
+{% endblock %}
+
+

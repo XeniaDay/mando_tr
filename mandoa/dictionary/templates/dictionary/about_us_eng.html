@@ -1,0 +1,46 @@
+{% extends 'dictionary/base_design.html' %}
+
+{% block title %}О нас{% endblock %}
+
+{% block navigat1 %}
+<a href="{% url 'home_eng' %}" class="a_nav">Dictionary</a> |
+| <a href="{% url 'grammar_eng' %}" class="a_nav">Grammar</a> |
+| <a href="{% url 'about_us_eng' %}" class="a_nav">About us</a>
+{% endblock %}
+
+{% block underline %}
+    <table class="nav_lang">
+        <tr>
+            <td class="rus_eng">
+                <a href="{% url 'home' %}" class="a_link">
+                    <div class="lang_underline">
+                        <div class="align_lg">r]S'a</div>
+                        <div class="add_text_lg">РУС</div>
+                    </div>
+                </a>
+            </td>
+            <td class="rus_eng">
+                <a href="{% url 'home_eng' %}" class="a_link">
+                    <div>
+                        <div class="align_lg">engle'a</div>
+                        <div class="add_text_lg">ENG</div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="button_login"></button>
+            </td>
+        </tr>
+    </table>
+{% endblock %}
+
+{% block aside %}
+
+{% endblock %}
+{% block content %}
+         <div class="features">
+
+        </div>
+{% endblock %}

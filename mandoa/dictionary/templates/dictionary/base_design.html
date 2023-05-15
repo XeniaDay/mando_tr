@@ -1,0 +1,54 @@
+{% load static %}
+
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'dictionary/css/dictionary.css' %}">
+    <link rel="stylesheet" href="{% static 'dictionary/fonts/mandoa_tadak.ttf' %}">
+</head>
+<body>
+
+    <nav class="nav1">
+        <table class="nav_body">
+            <tr>
+                <td>
+                    <table class="nav_brand">
+                        <tr>
+                            <td class="image_brand">
+                                <img src="{% static 'dictionary/img/boba.png' %}" alt="" width="54" height="72">
+                            </td>
+                            <td>
+                                <div class="name_brand1">mando'a daras}m</div>
+                                <div class="name_brand2">Mando'a darasuum</div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="nav_menu_0">
+                    <span class="nav_menu">{% block navigat1 %}{% endblock %}</span>
+                </td>
+                <td>
+                    {% block underline %}{% endblock %}
+                </td>
+            </tr>
+        </table>
+    </nav>
+    <aside>
+        {% block aside %}
+        {% endblock %}
+    </aside>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+
+</body>
+</html>

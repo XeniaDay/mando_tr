@@ -1,0 +1,43 @@
+{% extends 'dictionary/base_design.html' %}
+
+{% block title %}Phrasebook{% endblock %}
+
+{% block navigat1 %}
+<a href="{% url 'home_eng' %}" class="a_nav">Dictionary</a> |
+| <a href="{% url 'phrasebook_eng' %}" class="a_nav">Phrasebook</a> |
+| <a href="{% url 'grammar_eng' %}" class="a_nav">Grammar</a>
+{% endblock %}
+
+{% block underline %}
+    <table class="nav_lang">
+        <tr>
+            <td class="rus_eng">
+                <a href="{% url 'phrasebook' %}" class="a_link">
+                    <div>
+                        <div class="align_lg">r]S'a</div>
+                        <div class="add_text_lg">РУС</div>
+                    </div>
+                </a>
+            </td>
+            <td class="rus_eng">
+                <a href="{% url 'phrasebook_eng' %}" class="a_link">
+                    <div class="lang_underline">
+                        <div class="align_lg">engle'a</div>
+                        <div class="add_text_lg">ENG</div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="button_login"></button>
+            </td>
+        </tr>
+    </table>
+{% endblock %}
+
+{% block aside %}
+{% endblock %}
+
+{% block content %}
+{% endblock %}

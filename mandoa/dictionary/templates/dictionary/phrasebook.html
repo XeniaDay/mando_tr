@@ -1,0 +1,74 @@
+{% extends 'dictionary/base_design.html' %}
+
+
+{% block title %}Разговорник{% endblock %}
+
+{% block navigat1 %}
+<a href="{% url 'home' %}" class="a_nav">Словарь</a> |
+| <a href="{% url 'phrasebook' %}" class="a_nav">Разговорник</a> |
+| <a href="{% url 'grammar' %}" class="a_nav">Грамматика</a>
+{% endblock %}
+
+{% block underline %}
+    <table class="nav_lang">
+        <tr>
+            <td class="rus_eng">
+                <a href="{% url 'phrasebook' %}" class="a_link">
+                    <div class="lang_underline">
+                        <div class="align_lg">r]S'a</div>
+                        <div class="add_text_lg">РУС</div>
+                    </div>
+                </a>
+            </td>
+            <td class="rus_eng">
+                <a href="{% url 'phrasebook_eng' %}" class="a_link">
+                    <div>
+                        <div class="align_lg">engle'a</div>
+                        <div class="add_text_lg">ENG</div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="button_login"></button>
+            </td>
+        </tr>
+    </table>
+{% endblock %}
+
+{% block aside %}
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        {% if phrases %}
+            {% for em in phrases %}
+                <table>
+                    <tr>
+                        <td>
+                            {{ em.mandor }}
+                        </td>
+                        <td>
+                            {{ em.mandoa }}
+                        </td>
+                        <td>
+                            {{ em.russian }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            {{ em.comment_rus|default_if_none:""|safe }}
+                        </td>
+                    </tr>
+                </table>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+<audio controls src="{% media 'dictionary/audio/Aliit_orishia_taldin.mp3' %}">
+<!--"phrasebook/media/audio/Aliit_orishia_taldin.mp3"-->
+</audio>
+
+{% endblock %}
+

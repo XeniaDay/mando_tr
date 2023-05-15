@@ -1,0 +1,2680 @@
+{% extends 'dictionary/base_design.html' %}
+
+{% block title %}Грамматика{% endblock %}
+
+{% block navigat1 %}
+<a href="{% url 'home' %}" class="a_nav">Словарь</a> |
+| <a href="{% url 'grammar' %}" class="a_nav">Грамматика</a> |
+| <a href="{% url 'about_us' %}" class="a_nav">О нас</a>
+{% endblock %}
+
+{% block underline %}
+    <table class="nav_lang">
+        <tr>
+            <td class="rus_eng">
+                <a href="{% url 'home' %}" class="a_link">
+                    <div class="lang_underline">
+                        <div class="align_lg">r]S'a</div>
+                        <div class="add_text_lg">РУС</div>
+                    </div>
+                </a>
+            </td>
+            <td class="rus_eng">
+                <a href="{% url 'home_eng' %}" class="a_link">
+                    <div>
+                        <div class="align_lg">engle'a</div>
+                        <div class="add_text_lg">ENG</div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="button_login"></button>
+            </td>
+        </tr>
+    </table>
+{% endblock %}
+
+{% block aside %}
+<h3 class="options">Грамматика</h3>
+    <div class="grammar_menu_box">
+        <ul class="grm_menu">
+            <li class="grm_menu_point">
+                <div class="grm_menu_btm"></div>
+               <a href="#gr_rule_1" class="grm_menu_link">Мандор (алфавит)</a>
+            </li>
+            <li class="grm_menu_point">
+                <div class="grm_menu_btm"></div>
+               <a href="#gr_rule_2" class="grm_menu_link">Местоимения</a>
+            </li>
+            <li class="grm_menu_point">
+                <div class="block-2">
+                <a href="#gr_rule_3_sub" class="grm_menu_btm">▽</a>
+                <a href="#gr_rule_3" class="grm_menu_link">Существительные</a>
+                </div>
+                <div id="gr_rule_3_sub" class="grm-submenu">
+                    <a href="#gr_rule_3_1" class="grm-submenu-link">Множественное число</a>
+                    <a href="#gr_rule_3_2" class="grm-submenu-link">Притяжательный падеж</a>
+                </div>
+            </li>
+            <li class="grm_menu_point">
+                <div class="block-2">
+                <a href="#gr_rule_4_sub" class="grm_menu_btm">▽</a>
+                <a href="#gr_rule_4" class="grm_menu_link">Отрицательные формы</a>
+                </div>
+                <div id="gr_rule_4_sub" class="grm-submenu">
+                <a href="#gr_rule_4_1" class="grm-submenu-link">Приставки ne' и nu'</a>
+                <a href="#gr_rule_4_2" class="grm-submenu-link">Приставка noy'</a>
+                </div>
+            </li>
+            <li class="grm_menu_point">
+                <div class="block-2">
+                <a href="#gr_rule_5_sub" class="grm_menu_btm">▽</a>
+                <a href="#gr_rule_5" class="grm_menu_link">Глаголы</a>
+                </div>
+                <div id="gr_rule_5_sub" class="grm-submenu">
+                <a href="#gr_rule_5_1" class="grm-submenu-link">Командное наклонение</a>
+                <a href="#gr_rule_5_2" class="grm-submenu-link">Спряжение глаголов</a>
+                <a href="#gr_rule_5_3" class="grm-submenu-link">Формы глагола cuyir</a>
+                <a href="#gr_rule_5_4" class="grm-submenu-link">Основные времена</a>
+                <a href="#gr_rule_5_5" class="grm-submenu-link">Пассивный залог</a>
+                <a href="#gr_rule_5_6" class="grm-submenu-link">Модальные глаголы-приставки</a>
+                </div>
+            </li>
+            <li class="grm_menu_point">
+                <div class="block-2">
+                <a href="#gr_rule_6_sub" class="grm_menu_btm">▽</a>
+                <a href="#gr_rule_6" class="grm_menu_link">Прилагательные</a>
+                </div>
+                <div id="gr_rule_6_sub" class="grm-submenu">
+                <a href="#gr_rule_6_1" class="grm-submenu-link">Сравнительная форма</a>
+                <a href="#gr_rule_6_2" class="grm-submenu-link">Превосходная форма</a>
+                </div>
+            </li>
+            <li class="grm_menu_point">
+                <div class="grm_menu_btm"></div>
+               <a href="#gr_rule_7" class="grm_menu_link">Союзы</a>
+            </li>
+            <li class="grm_menu_point">
+                <div class="block-2">
+                <a href="#gr_rule_10_sub" class="grm_menu_btm">▽</a>
+                <a href="#gr_rule_10" class="grm_menu_link">Предложения</a>
+                </div>
+                <div id="gr_rule_10_sub" class="grm-submenu">
+                <a href="#gr_rule_10_1" class="grm-submenu-link">Подлежащее</a>
+                <a href="#gr_rule_10_2" class="grm-submenu-link">Простое сказуемое</a>
+                <a href="#gr_rule_10_3" class="grm-submenu-link">Составное сказуемое</a>
+                <a href="#gr_rule_10_7" class="grm-submenu-link">Вопросительная форма</a>
+                <a href="#gr_rule_10_8" class="grm-submenu-link">Вопросительные слова</a>
+                </div>
+            </li>
+    </ul>
+
+    </div>
+{% endblock %}
+{% block content %}
+    <div class="features">
+        <div class="gr_main_scroll">
+            <div class = 'gr_main_rule' id="gr_rule_1">
+                <h5>Мандор (алфавит)</h5>
+                <div class = 'indent'>
+                    <table class="grammar_mandor">
+                        <tr>
+                            <td>
+                                m
+                            </td>
+                            <td>
+                                [м] </br>(море)
+                            </td>
+                            <td>
+                                мо
+                            </td>
+                            <td>
+                                b
+                            </td>
+                            <td>
+                                [б] </br>(бык)
+                            </td>
+                            <td>
+                                бэ
+                            </td>
+                            <td>
+                                [
+                            </td>
+                            <td>
+                                [ай] </br>(айсберг)
+                            </td>
+                            <td>
+                                айа
+                            </td>
+                            <td>
+                                g
+                            </td>
+                            <td>
+                                [г] </br>(гора)
+                            </td>
+                            <td>
+                                гар
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                a
+                            </td>
+                            <td>
+                                [а] </br>(база, </br>раб)
+                            </td>
+                            <td>
+                                а
+                            </td>
+                            <td>
+                                y
+                            </td>
+                            <td>
+                                [й] </br>(йог)
+                            </td>
+                            <td>
+                                йэ
+                            </td>
+                            <td>
+                                l
+                            </td>
+                            <td>
+                                [л] </br>(лава)
+                            </td>
+                            <td>
+                                лэ
+                            </td>
+                            <td>
+                                i
+                            </td>
+                            <td>
+                                [и] </br>(клип)
+                            </td>
+                            <td>
+                                ин
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                n
+                            </td>
+                            <td>
+                                [н] </br>(налог)
+                            </td>
+                            <td>
+                                нэ
+                            </td>
+                            <td>
+                                t
+                            </td>
+                            <td>
+                                [т] </br>(торт)
+                            </td>
+                            <td>
+                                та
+                            </td>
+                            <td>
+                                s
+                            </td>
+                            <td>
+                                [с] </br>(сук)
+                            </td>
+                            <td>
+                                са
+                            </td>
+                            <td>
+                                c
+                            </td>
+                            <td>
+                                [ч] </br>(чушь)
+                            </td>
+                            <td>
+                                ча
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                d
+                            </td>
+                            <td>
+                                [д] </br>(дуб)
+                            </td>
+                            <td>
+                                да
+                            </td>
+                            <td>
+                                x
+                            </td>
+                            <td>
+                                [ш] </br>(шок)
+                            </td>
+                            <td>
+                                шэ
+                            </td>
+                            <td>
+                                ]
+                            </td>
+                            <td>
+                                [у] </br>(обуза)
+                            </td>
+                            <td>
+                                ун
+                            </td>
+                            <td>
+                                w
+                            </td>
+                            <td>
+                                [уэ] </br>(как w в </br>англ. warm)
+                            </td>
+                            <td>
+                                уэн
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                o
+                            </td>
+                            <td>
+                                [о] </br>(обух)
+                            </td>
+                            <td>
+                                он
+                            </td>
+                            <td>
+                                e
+                            </td>
+                            <td>
+                                [э] </br>(эгоист)
+                            </td>
+                            <td>
+                                эн
+                            </td>
+                            <td>
+                                v
+                            </td>
+                            <td>
+                                [в] </br>(вор)
+                            </td>
+                            <td>
+                                во
+                            </td>
+                            <td>
+                                \
+                            </td>
+                            <td>
+                                [ой] </br>(покрой)
+                            </td>
+                            <td>
+                                ойв
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                r
+                            </td>
+                            <td>
+                                [р] </br>(рок)
+                            </td>
+                            <td>
+                                ра
+                            </td>
+                            <td>
+                                &
+                            </td>
+                            <td>
+                                [и] </br>(ива)
+                            </td>
+                            <td>
+                                и:н </br>(иин)
+                            </td>
+                            <td>
+                                p
+                            </td>
+                            <td>
+                                [п] </br>(пуля)
+                            </td>
+                            <td>
+                                пэ
+                            </td>
+                            <td>
+                                f
+                            </td>
+                            <td>
+                                [ф] </br>(факел)
+                            </td>
+                            <td>
+                                фар
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                q
+                            </td>
+                            <td>
+                                [эй] </br>(эйфория)
+                            </td>
+                            <td>
+                                эй
+                            </td>
+                            <td>
+                                j
+                            </td>
+                            <td>
+                                [дж] </br>(джаз)
+                            </td>
+                            <td>
+                                джа
+                            </td>
+                            <td>
+                                u
+                            </td>
+                            <td>
+                                [а] </br>(кабан)
+                            </td>
+                            <td>
+                                ан
+                            </td>
+                            <td>
+                                ;
+                            </td>
+                            <td>
+                                [уй] </br>(буй, </br>буржуй)
+                            </td>
+                            <td>
+                                уйн
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                h
+                            </td>
+                            <td>
+                                [х] </br>(халат)
+                            </td>
+                            <td>
+                                ха
+                            </td>
+                            <td>
+                                k
+                            </td>
+                            <td>
+                                [к] </br>(кот)
+                            </td>
+                            <td>
+                                ка
+                            </td>
+                            <td>
+                                z
+                            </td>
+                            <td>
+                                [з] </br>(зов)
+                            </td>
+                            <td>
+                                жар
+                            </td>
+                            <td>
+                                 '
+                            </td>
+                            <td>
+                                дыхатель- </br>ная пауза
+                            </td>
+                            <td>
+                                бэйтэн
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class = 'gr_main_rule' id="gr_rule_2">
+                <h5>Местоимения</h5>
+                <div class = 'indent'>
+                    Местоимения не разделяются по родам.
+                    Большинство местоимений не имеет отдельной притяжательной формы.
+                    <table class="pronouns">
+                        <tr>
+                            <td class = 'pronouns_td'>
+                                <span class="mandor_2" translate="ni">ni</span>
+                            </td>
+                            <td class = 'pronouns_td'>
+                                я
+                            </td>
+                            <td class = 'pronouns_td'>
+                                <span class="mandor_2" translate="ner">ner</span>
+                            </td>
+                            <td class = 'pronouns_td'>
+                                мой, моя
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'pronouns_td'>
+                                <span class="mandor_2" translate="gar">gar</span>
+                            </td>
+                            <td class = 'pronouns_td'>
+                                ты
+                            </td>
+                            <td class = 'pronouns_td'>
+                                <span class="mandor_2" translate="gar">gar</span>
+                            </td>
+                            <td class = 'pronouns_td'>
+                                твой, твоя
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'pronouns_td'>
+                                <span class="mandor_2" translate="kaysh">k[x</span>
+                            </td>
+                            <td class = 'pronouns_td'>
+                                он, она
+                            </td>
+                            <td class = 'pronouns_td'>
+                                <span class="mandor_2" translate="kaysh">k[x</span>
+                            </td>
+                            <td class = 'pronouns_td'>
+                                его, ее
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'pronouns_td'>
+                                <span class="mandor_2" translate="mhi">mi</span>
+                            </td>
+                            <td class = 'pronouns_td'>
+                                мы
+                            </td>
+                            <td class = 'pronouns_td'>
+                                <span class="mandor_2" translate="cuun">k}n</span>
+                            </td>
+                            <td class = 'pronouns_td'>
+                                наш, наша
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'pronouns_td'>
+                                <span class="mandor_2" translate="g'an">g'an</span>
+                            </td>
+                            <td class = 'pronouns_td'>
+                                вы
+                            </td>
+                            <td class = 'pronouns_td'>
+                                <span class="mandor_2" translate="g'an">g'an</span>
+                            </td>
+                            <td class = 'pronouns_td'>
+                                ваш, ваша
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'pronouns_td'>
+                                <span class="mandor_2" translate="val">val</span>
+                            </td>
+                            <td class = 'pronouns_td'>
+                                они
+                            </td>
+                            <td class = 'pronouns_td'>
+                                <span class="mandor_2" translate="val">val</span>
+                            </td>
+                            <td class = 'pronouns_td'>
+                                их
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class = 'indent'>
+                    Иногда, очень редко, указательное местоимение <span class="mandor_1" translate="bic">bik</span> ("это")
+                    может использоваться и в значении "оно".
+                </div>
+            </div>
+
+            <div class = 'gr_main_rule' id="gr_rule_3">
+                <h5>Существительные</h5>
+                <div class = 'indent'>
+                    Существительные в Мандо'а не имеют рода. Если необходимо, род может быть определен по контексту. </br>
+                    В очень редких случаях, когда род все же требуется уточнить, возможно использование прилагательных
+                        <span class="mandor_1" translate="jagyc">jag&x</span> ("мужской") или
+                        <span class="mandor_1" translate="dalyc">dal&x</span> ("женский").
+                    <div class = 'example'>
+                        Пример:
+                        <table class = 'grammar_example'>
+                            <tr>
+                                <td class = 'grammar_example_td'>
+                                    <span class="mandor_2" translate="Ni copaani evaar'la dalyc haal'cabur">
+                                        ni kopAn& evAr'la dal&x hAl'kab]r</span>
+                                </td>
+                                <td class = 'grammar_example_td'>
+                                    Я хочу новую женскую нагрудную кирасу
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'grammar_example_td'>
+                                    <span class="mandor_2" translate="Ke'dinui ni jagyc kute">
+                                        ke'd&n;& ni jag&x k]tq</span>
+                                </td>
+                                <td class = 'grammar_example_td'>
+                                    Дай мне мужское белье
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class = 'gr_main_rule' id="gr_rule_3_1">
+                <h5>Множественное число</h5>
+                    <div class="indent">
+                    Множественное число образуется добавлением окончания
+                        <span class="mandor_1" translate="-e">-q</span> (после согласной) или
+                        <span class="mandor_1" translate="-se">-sq</span> (после гласной).
+                    </div>
+                    <div class = 'example'>
+                        Пример:
+                        <table class = 'grammar_example'>
+                            <tr>
+                                <td class = 'grammar_example_td'>
+                                    <span class="mandor_2" translate="beskar'ade">beskar'adq</span>
+                                </td>
+                                <td class = 'grammar_example_td'>
+                                    дроиды, роботы
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'grammar_example_td'>
+                                    <span class="mandor_2" translate="aruetiise">ar]qtIsq</span>
+                                </td>
+                                <td class = 'grammar_example_td'>
+                                    посторонние, предатели
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+            </div>
+
+            <div class="gr_main_rule" id="gr_rule_3_2">
+                <h5>Притяжательный падеж</h5>
+                <div class="indent">
+                    Образование притяжательного падежа в Мандо'а в основном зависит от контекста.
+                    Самый простой способ это использование предлога <span class="mandor_1" translate="be">be</span>
+                    или притяжательной приставки <span class="mandor_1" translate="be'">be'</span>.
+                    Разница между ними такая же как между фразами "Сабля Бобы" и "Бобина сабля", т.е. никакой.
+                    <div class="example">
+                        Пример:
+                        <table class = 'grammar_example'>
+                            <tr>
+                                <td class = 'grammar_example_td'>
+                                    <span class="mandor_2" translate="Kad be Boba">
+                                        kad be boba</span>
+                                </td>
+                                <td class = 'grammar_example_td'>
+                                    Сабля Бобы
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'grammar_example_td'>
+                                    <span class="mandor_2" translate="Kad be'Boba">
+                                        kad be'boba</span>
+                                </td>
+                                <td class = 'grammar_example_td'>
+                                    Бобина сабля
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="indent">
+                    Иногда притяжательные существительные присоединяются к объекту.
+                    <div class="example">
+                        Пример:
+                        <table class = 'grammar_example'>
+                            <tr>
+                                <td class = 'grammar_example_td'>
+                                    <span class="mandor_2" translate="Boba'kad">
+                                        boba'kad</span>
+                                </td>
+                                <td class = 'grammar_example_td'>
+                                    Сабля Бобы
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="indent">
+                    Редкая и устаревшая форма - использование притяжательных слов как суффиксов
+                    <span class="mandor_1" translate=" 'be"> 'be</span> или
+                    <span class="mandor_1" translate=" 'b"> 'b</span>.
+                    <div class="example">
+                        Пример:
+                        <table class = 'grammar_example'>
+                            <tr>
+                                <td class = 'grammar_example_td'>
+                                    <span class="mandor_2" translate="Boba'be kad">
+                                        boba'be kad</span>
+                                </td>
+                                <td class = 'grammar_example_td'>
+                                    Сабля Бобы
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'grammar_example_td'>
+                                    <span class="mandor_2" translate="jetii'b kad">
+                                        jetI'b kad</span>
+                                </td>
+                                <td class = 'grammar_example_td'>
+                                    Меч джедая
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gr_main_rule" id="gr_rule_4">
+                <h5>Отрицательные формы</h5>
+                <div class="indent">
+                    Отрицательные формы могут быть образованы с любой частью речи. Отрицание также может быть
+                    отнесено к целой фразе.</br>
+                    Чаще всего отрицательная форма образуется от словарных форм слова путем добавления к нему специальных
+                    приставок.</br> Но бывают случаи, особенно это характерно для архаичных форм, когда отрицательная
+                    частица сливается с корневой основой слова и в таком виде уже используется самостоятельно.</br>
+                    <div class="example">
+                        Пример:
+                        <table class = 'word_transformation'>
+                            <tr>
+                                <td class = 'word_transformation_th'>
+                                    приставка
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    корень
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    окончание
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    слово
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    перевод
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="no-">
+                                        no-</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="vor">
+                                        vor</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="-er">
+                                        -er</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="novorer">
+                                        novorer</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    блокировать, мешать, противостоять
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    &nbsp;
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="vor">
+                                        vor</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="-er">
+                                        -er</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="vorer">
+                                        vorer</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    принимать, соглашаться, допускать
+                                </td>
+                            </tr>
+                        </table>
+                </div>
+            </div>
+            </div>
+
+            <div class="gr_main_rule" id="gr_rule_4_1">
+                <h5>Отрицательные частицы ne' и nu'</h5>
+                <div class="indent">
+                    Отрицательная форма образуется с помощью приставок
+                    <span class="mandor_1" translate="ne'">nq'</span> или
+                    <span class="mandor_1" translate="nu'">n]'</span> перед согласными звуками и
+                    <span class="mandor_1" translate="n'">n'</span> перед гласными.</br>
+                    Приставки равнозначны в употреблении, но вариант
+                    <span class="mandor_1" translate="ne'">nq'</span> распространен немного больше.</br>
+                    <div class="example">
+                        Пример:
+                        <table class = 'word_transformation'>
+                            <tr>
+                                <td class = 'word_transformation_th'>
+                                    приставка
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    корень
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    окончание
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    слово
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    перевод
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="ne'-">
+                                        nq'-</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="kaan">
+                                        kAn</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    &nbsp;
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="ne'kaan">
+                                        nq'kAn</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    нон-комбатант, гражданский (сущ.)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="nu'-">
+                                        n]'-</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="am">
+                                        am</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="-yc">
+                                        -&x</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="nu'amyc">
+                                        n]'am&x</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    нормальный, привычный, обычный, неизменный (прил.)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="n'-">
+                                        n'-</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="epa">
+                                        epa</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="-r">
+                                        -r</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="n'epar">
+                                        n'epar</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    не есть (глаг.)
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gr_main_rule" id="gr_rule_4_2">
+                <h5>Частица противоположного значения noy'</h5>
+                <div class="indent">
+                    Отрицательная частица
+                    <span class="mandor_1" translate="noy'">n\'</span> используется для обозначения
+                    противоположного действия. </br>В русском языке аналогом может служить сочетание
+                    приставок "с-" и "раз-", например, сложить - разложить.</br> Частица
+                    <span class="mandor_1" translate="noy'">n\'</span>
+                    обычно применяется к глаголам, но от глаголов могут быть образованы и другие части речи.</br>
+                    </br>Слова с приставкой противоположного значения могут служить синонимами словам,
+                    образованным другим способом.
+                    <div class="example">
+                        Пример:
+                        <table class = 'word_transformation'>
+                            <tr>
+                                <td class = 'word_transformation_th'>
+                                    слово с noy'
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    синоним
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    перевод
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="noy'tenn">
+                                        n\'teN</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="haaranov'la">
+                                        hAranov'la</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    скрытый, закрытый, секретный
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="noy'gotal'ur">
+                                        n\'gotal']r</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="naastar">
+                                        nAstar</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    разрушать
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gr_main_rule" id="gr_rule_5">
+                <h5>Глаголы</h5>
+                <div class="indent">
+                    В инфинитиве глаголы в Мандо'а имеют следующие окончания:</br>
+                    - eсли корневое слово заканчивается на гласную, то образованный от слова глагол заканчивается на
+                    <span class="mandor_1" translate="-r">-r</span>;</br>
+                    - если корневое слово заканчивается на согласную, то в конце глагола добавляется гласная и
+                    <span class="mandor_1" translate="-r">-r</span>.</br>
+
+                    <div class="example">
+                        Пример:
+                        <table class = 'word_transformation'>
+                            <tr>
+                                <td class = 'word_transformation_th'>
+                                    корень
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    окончание
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    слово
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    перевод
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="beten">
+                                        bqten</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="-or">
+                                        -or</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="betenor">
+                                        bqtenor</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    вздыхать, выдыхать
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="chak">
+                                        cak</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="-ur">
+                                        -]r</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="chakur">
+                                        cak]r</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    красть, грабить
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="cyar">
+                                        xar</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="-ir">
+                                        -&r</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="cyarir">
+                                        xar&r</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    любить
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="linii">
+                                        l&nI</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="-r">
+                                        -r</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="linir">
+                                        l&n&r</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    нуждаться
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    Наиболее распространенным является окончание <span class="mandor_1" translate="-ir">-&r</span></br>
+                    Если корневая основа оканчивается на руну <span class="mandor_1" translate="-i">-i</span>,
+                    то в глагольном окончании она трансфомируется в руну <span class="mandor_1" translate="-ii">-&</span></br>
+                    </br>
+                    Во всех глаголах ударение приходится только на их глагольное окончание.</br>
+                    Даже если в других частях речи, образованных от того же самого корня, ударение ставится иначе,</br>
+                    то в глаголах ударение переходит на глагольное окончание.</br>
+                    Например, <span class="mandor_1" translate="beten">bqten</span> <i>[BEY-tehn]</i> (сущ.) и
+                    <span class="mandor_1" translate="betenor">bqtenor</span> <i>[bey-tehn-OHR]</i> (глаг.)
+                </div>
+            </div>
+
+            <div class="gr_main_rule" id="gr_rule_5_1">
+                <h5>Командное наклонение</h5>
+                <div class="indent">
+                    В мандо'а различают два вида наклонения глаголов.</br>
+                    Инфинитив, который можно соотнести с изъявительным наклонением в русском языке.
+                    Он представлен словарной формой слова.</br>
+                    И командное наклонение, при помощи которого формируется приказ, команда.
+                    В русском языке оно соответствует повелительному наклонению.</br></br>
+                    Командная форма глагола образуется путем его постановки во второе лицо</br> и добавлением
+                    к нему приставки <span class="mandor_1" translate="ke'">ke'</span> перед согласной буквой
+                    и <span class="mandor_1" translate="k'">k'</span> перед гласной.
+                </div>
+                <div class = 'example'>
+                    Пример:
+                    <table class = 'grammar_example_4'>
+                        <tr>
+                            <td class = 'grammar_example_4_th'>
+                                инфинитив
+                            </td>
+                            <td class = 'grammar_example_4_th'>
+                                перевод
+                            </td>
+                            <td class = 'grammar_example_4_th'>
+                                команда
+                            </td>
+                            <td class = 'grammar_example_4_th'>
+                                перевод
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'grammar_example_4_td'>
+                                <span class="mandor_2" translate="parer">parqr</span>
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                ждать
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                <span class="mandor_2" translate="Ke'pare!">ke'parq!</span>
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                Жди!
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'grammar_example_4_td'>
+                                <span class="mandor_2" translate="atiniir">at&n%r</span>
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                терпеть, держаться
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                <span class="mandor_2" translate="K'atinii!">k'at&n%!</span>
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                Терпи! Держись!
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="gr_main_rule" id="gr_rule_5_2">
+                <h5>Спряжение глаголов</h5>
+                <div class="indent">
+                    В мандо'а глагол имеет только две формы спряжения.</br>
+                    Неопределенная выражена инфинитивом и соответствует словарной форме слова.</br>
+                    Личная форма образуется путем сокращения звука <span class="mandor_1" translate="-r">-r</span>
+                    в глагольном окончании.</br>
+                    Личная форма по временам, лицам, родам и числам не изменяется. </br>
+                    Исключением является небольшая группа архаичных глаголов.
+                </div>
+                <div class = 'example'>
+                    Пример:
+                    <table class = 'grammar_example_4'>
+                        <tr>
+                            <td class = 'grammar_example_4_th'>
+                                инфинитив
+                            </td>
+                            <td class = 'grammar_example_4_th'>
+                                перевод
+                            </td>
+                            <td class = 'grammar_example_4_th'>
+                                личная форма
+                            </td>
+                            <td class = 'grammar_example_4_th'>
+                                перевод
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'grammar_example_4_td'>
+                                <span class="mandor_2" translate="akaanir">akAn&r</span>
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                биться, сражаться
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                <span class="mandor_2" translate="Ni akaani">ni akAn&</span>
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                Я сражаюсь
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'grammar_example_4_td'>
+                                <span class="mandor_2" translate="olaror">olaror</span>
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                приходить, прибывать, приезжать
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                <span class="mandor_2" translate="Kaysh olaro o'r ru'tuur">k[x olaro o'r r]'t}r</span>
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                Он прибыл вчера
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'grammar_example_4_td'>
+                                <span class="mandor_2" translate="nuhoyir">n]h\&r</span>
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                спать (крепко)
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                <span class="mandor_2" translate="Val nuhoyi">val n]h\&</span>
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                Они крепко спят
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="gr_main_rule" id="gr_rule_5_3">
+                <h5>Формы глагола <span class="mandor_1" translate="cuyir">k;&r</span> (быть)</h5>
+                <div class="indent">
+                    После реформы языка, проведенной Ор'ком Раск (
+                    <span class="mandor_1" translate="Or'ka Rusk">or'ka rask</span>), тонгом, жившим во времена
+                    Мандалора Наивысшего, в мандо'а практически не осталось исключений в спряжении глаголов.</br>
+                    Когда в ряды мандалорцев начали вливаться другие расы, и на мандо'а стали
+                    говорить не только тонги, освоение всех тонкостей древнего языка было слишком сложным
+                    для многих из них.</br>
+                    Потребовалась реформа, и в новом мандо'а были приняты ряд упрощений и унификаций.</br>
+                    Но некоторые исключения оказались все же слишком живучими, и преодолеть реформой их не удалось.</br>
+                    Важнейшим исключением остался глагол <span class="mandor_1" translate="cuyir">k;&r</span> - быть.
+                </div>
+                <div class = 'example'>
+                    <table class = 'grammar_example_4'>
+                        <tr>
+                            <td class = 'grammar_example_4_td'>
+                                <span class="mandor_2" translate="Ni cuy">ni k;</span>
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                Я есть
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                <span class="mandor_2" translate="Mhi cuy">mi k;</span>
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                Мы есть
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'grammar_example_4_td'>
+                                <span class="mandor_2" translate="Gar cuy">gar k;</span>
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                ты есть
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                <span class="mandor_2" translate="G'an cuy">g'an k;</span>
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                вы есть
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'grammar_example_4_td'>
+                                <span class="mandor_2" translate="Kaysh cuyi">k[x k;&</span>
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                он/она есть
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                <span class="mandor_2" translate="Val cuyi">val k;&</span>
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                они есть
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'grammar_example_4_td'>
+                                <span class="mandor_2" translate="Bic cuyi">bik k;&</span>
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                оно/это есть
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                &nbsp;
+                            </td>
+                            <td class = 'grammar_example_4_td'>
+                                &nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                    </br>
+                    Глагол <span class="mandor_1" translate="cuyir">k;&r</span> в речи чаще всего опускается
+                    и используется только в качестве уточняющего слова. </br>Смысл обычно понятен из контекста
+                    или, при необходимости, может быть передан через порядок слов.
+                </div>
+            </div>
+
+            <div class = 'gr_main_rule' id="gr_rule_5_4">
+                <h5>Основные времена глаголов</h5>
+                <div class = 'indent'>
+                    Настоящее время глагола является самым распространенным, самым универсальным
+                    и самым доминирующим в языке. </br>Если время события можно уточнить другими словами предложения
+                    или понять из контекста,  </br>то для описания действия будет использовано настоящее время. </br>
+                    Настоящее время выражено личной формой глагола и не имеет никаких дополнительных приставок.</br></br>
+                    Прошедшее время формируется путем добавления к личной форме глагола приставки
+                    <span class="mandor_1" translate="ru'">r]'</span> для корней, начинающихся с согласной,  </br>и
+                    приставки <span class="mandor_1" translate="r'">r'</span> для корней, начинающихся с гласной.
+                    </br></br>
+                    Для образования формы глагола в будущем времени к глаголу в личной форме добавляется приставка
+                    <span class="mandor_1" translate="ven'">ven'</span></br></br>
+                </div>
+                <div class = 'example'>
+                    Пример:
+                    <table class = 'grammar_example_6'>
+                        <tr>
+                            <td class = 'grammar_example_6_th'>
+                                настоящее время
+                            </td>
+                            <td class = 'grammar_example_6_th'>
+                                перевод
+                            </td>
+                            <td class = 'grammar_example_6_th'>
+                                прошедшее время
+                            </td>
+                            <td class = 'grammar_example_6_th'>
+                                перевод
+                            </td>
+                            <td class = 'grammar_example_6_th'>
+                                будущее время
+                            </td>
+                            <td class = 'grammar_example_6_th'>
+                                перевод
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Ni davaa koo'nar">ni davA k]'nar</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Я выполняю долг (по договору)
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Ni ru'davaa koo'nar">ni r]'davA k]'nar</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Я выполнил долг (по договору)
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Ni ven'davaa koo'nar">ni ven'davA k]'nar</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Я выполню долг (по договору)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Ban'dushe ami gar">ban'd]xq am& gar</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Трудности меняют тебя
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Ban'dushe r'ami gar">ban'd]xq r'am& gar</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Трудности изменили тебя
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Ban'dushe ven'ami gar">ban'd]xq ven'am& gar</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Трудности изменят тебя
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class = 'gr_main_rule' id="gr_rule_5_5">
+                <h5>Пассивный залог</h5>
+                <div class = 'indent'>
+                    Мандо'а является активным языком. Мандалорец скорее построит предложение при помощи прямого порядка слов,
+                    от субъекта к объекту.</br>
+                    Но бывают случаи, когда без пассивного залога не обойтись. Такие фразы используются намного реже, и
+                    либо когда надо специальным образом подчеркнуть именно пассивный характер действия,
+                    либо когда субъект понятен из контекста, и в предложении опускается.
+                    </br></br>
+                    Пассивный залог строится от объекта к субъекту и перед субъектом ставится частица
+                    <span class="mandor_1" translate="de">de</span>.</br>
+                    В современном мандо'а частица <span class="mandor_1" translate="de">de</span> является предлогом,
+                    но в архаичных текстах эта частица выступает в качестве приставки и включается в состав слова.</br></br>
+                    Само воздействие на объект может быть выражено двумя равнозначными и равноиспользуемыми способами.</br></br>
+                    <i>Способ 1.</i> </br> К значимому глаголу, стоящему в личной форме, добавляется глагольный
+                    суффикс <span class="mandor_1" translate="'bar">'bar</span>.</br>
+                    Для образования личной формы глагола, стоящего в пассивном залоге,
+                    <span class="mandor_1" translate="-r">-r</span> отбрасывается уже от глагольного суффикса.</br>
+                    Данный способ образования пассивного залога может применяться только к глаголам.
+
+                    </br></br>
+                    <i>Способ 2.</i> </br> Для образования пассивного залога с глаголом используется приставка
+                    <span class="mandor_1" translate="cuy'">k;'</span> </br> или вспомогательный глагол
+                    <span class="mandor_1" translate="cuyir">k;&r</span> (быть), который ставится в то же лицо и число,
+                    что и объект.
+                    </br></br>
+                    Пример
+                    <table class="grammar_example_4">
+                        <tr>
+                            <td colspan="2" class="grammar_example_4_th">активная форма: субъект => действие => объект</td>
+                            <td colspan="2" class="grammar_example_4_th">пассивная форма: объект <= действие <= субъект</td>
+                        </tr>
+                        <tr>
+                            <td class="grammar_example_4_td">
+                                <span class="mandor_2" translate="Ash'ade ru'taap'tayli ori'me'sen">
+                                    ax'adq r]'tAp't[l& or&'mq'sen</span>
+                            </td>
+                            <td class="grammar_example_4_td">Кто-то захватил крейсер</td>
+                            <td class="grammar_example_4_td">
+                                <span class="mandor_2" translate="Ori'me'sen ru'taap'tayliba (d'ash'ade)">
+                                   or&'mq'sen r]'tAp't[l&ba (d'ax'adq)</span>
+                            </td>
+                            <td class="grammar_example_4_td">Крейсер захвачен </br>(кем-то) </br>
+                                <i style="color:SlateGrey">способ 1</i></td>
+                        </tr>
+                        <tr>
+                            <td class="grammar_example_4_td">
+                                <span class="mandor_2" translate="Kaysh ru'susulu ni">k[x r]'s]s]l] ni</span>
+                            </td>
+                            <td class="grammar_example_4_td">Он услышал меня</td>
+                            <td class="grammar_example_4_td">
+                                <span class="mandor_2" translate="Ni cuy ru'susulur de kaysh">
+                                    ni k; r]'s]s]l]r de k[x</span>
+                            </td>
+                            <td class="grammar_example_4_td">Я был услышан им </br>
+                                <i style="color:SlateGrey">способ 2, 1-е лицо</i></td>
+                        </tr>
+                        <tr>
+                            <td class="grammar_example_4_td">
+                                <span class="mandor_2" translate="Oriya hetti">
+                                    or&ya heT&</span>
+                            </td>
+                            <td class="grammar_example_4_td">Город горит</td>
+                            <td class="grammar_example_4_td">
+                                <span class="mandor_2" translate="Oriya cuyi hettir (d'ash'ade)">
+                                   or&ya k;& heT&r (d'ax'adq)</span>
+                            </td>
+                            <td class="grammar_example_4_td">Город сжигается (кем-то) </br>
+                                <i style="color:SlateGrey">способ 2, 3-е лицо</i></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class = 'gr_main_rule' id="gr_rule_5_6">
+                <h5>Модальные глаголы-приставки</h5>
+                <div class = 'indent'>
+                    Использование модальных глаголов-приставок в современном мандо'а несет некоторую
+                    ритуально-архаическую окраску. </br>Модальные глаголы-приставки подчеркивают особую важность фразы,
+                    в которой они присутствуют.</br></br>
+                    Стилистически модальные глаголы-приставки наиболее часто употребляются в официальной речи, </br>но иногда
+                    их можно услышать и в бытовом языке. </br>Однако, в бытовом языке зачастую те же самые мысли выражаются
+                    словами с меньшей долей пафоса, попроще.
+                    </br></br>
+                    В базовом варианте, когда модальный глагол присоединяется к смысловому, модальный глагол
+                    выступает в роли приставки.</br>
+                    Но если модальный глагол стоит в отрицательной или вопросительной форме и к нему присоединяются
+                    соответствующие приставки, </br>то он превращается в самостоятельное слово и используется отдельно
+                    от смыслового глагола, располагаясь непосредственно перед ним.</br></br>
+
+
+                    <table class="grammar_example_7">
+                        <tr>
+                            <td colspan="2" class="grammar_example_7_th">базовая форма</td>
+                            <td rowspan="2" class="grammar_example_7_th">перевод</td>
+                            <td rowspan="2" class="grammar_example_7_th">отрицатель-</br>ная форма</td>
+                            <td rowspan="2" class="grammar_example_7_th">перевод</td>
+                            <td rowspan="2" class="grammar_example_7_th">вопроситель-</br>ная форма</td>
+                            <td rowspan="2" class="grammar_example_7_th">перевод</td>
+                        </tr>
+                        <tr>
+                            <td class="grammar_example_7_th2">перед</br>гласн.</td>
+                            <td class="grammar_example_7_th2">перед</br>согл.</td>
+                        </tr>
+                        <tr>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="ent'">ent'</span>
+                            </td>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="ente'">ente'</span>
+                            </td>
+                            <td class="grammar_example_7_td">должен, обязан</td>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="n'ente">n'ente</span>
+                            </td>
+                            <td class="grammar_example_7_td">не должен, не обязан</td>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="tion'ente">t&on'ente</span>
+                            </td>
+                            <td class="grammar_example_7_td">должен ли, обязан ли</td>
+                        </tr>
+                        <tr>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="vegyc'">veg&x'</span>
+                            </td>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="vegyce'">veg&xe'</span>
+                            </td>
+                            <td class="grammar_example_7_td">необходимость сделать что-то в будущем</td>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="ne'vegyc">nq'veg&x</span>
+                            </td>
+                            <td class="grammar_example_7_td">нет необходимости сделать что-то в будущем</td>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="tion'vegyc">t&on'veg&x</span>
+                            </td>
+                            <td class="grammar_example_7_td">необходимо ли сделать что-то в будущем</td>
+                        </tr>
+                        <tr>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="ret'">ret'</span>
+                            </td>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="reta'">retu'</span>
+                            </td>
+                            <td class="grammar_example_7_td">возможность сделать что-то в прошлом</td>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="ne'ret">nq'ret</span>
+                            </td>
+                            <td class="grammar_example_7_td">невозможность сделать что-то в прошлом</td>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="tion'ret">t&on'ret</span>
+                            </td>
+                            <td class="grammar_example_7_td">возможно ли было сделать что-то в прошлом</td>
+                        </tr>
+                        <tr>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="gyc'">g&x'</span>
+                            </td>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="gyce'">g&xe'</span>
+                            </td>
+                            <td class="grammar_example_7_td">намерение сделать что-то в будущем</td>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="ne'gyc">nq'g&x</span>
+                            </td>
+                            <td class="grammar_example_7_td">намерение не делать что-то в будущем</td>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="tion'gyc">t&on'g&x</span>
+                            </td>
+                            <td class="grammar_example_7_td">намерены ли сделать что-то в будущем</td>
+                        </tr>
+                        <tr>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="duur'">d}r'</span>
+                            </td>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="duu'">d}'</span>
+                            </td>
+                            <td class="grammar_example_7_td">выражает разрешение</td>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="nu'duur">n]'d}r</span>
+                            </td>
+                            <td class="grammar_example_7_td">выражает запрет, </br>не разрешено</td>
+                            <td class="grammar_example_7_td">
+                                <span class="mandor_2" translate="tion'duur">t&on'd}r</span>
+                            </td>
+                            <td class="grammar_example_7_td">разрешено ли </br>что-то сделать</td>
+                        </tr>
+                    </table>
+                    </br></br>
+                    Пример
+                    <table class = 'grammar_example_6'>
+                        <tr>
+                            <td class = 'grammar_example_6_th'>
+                                базовая форма
+                            </td>
+                            <td class = 'grammar_example_6_th'>
+                                перевод
+                            </td>
+                            <td class = 'grammar_example_6_th'>
+                                отрицательная форма
+                            </td>
+                            <td class = 'grammar_example_6_th'>
+                                перевод
+                            </td>
+                            <td class = 'grammar_example_6_th'>
+                                вопросительная форма
+                            </td>
+                            <td class = 'grammar_example_6_th'>
+                                перевод
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Gar ent'ara'novo kaysh">gar ent'ara'novo k[x</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Ты должен защищать его
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Gar n'ente ara'novo kaysh">gar n'ente ara'novo k[x</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Ты не должен защищать его
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Tion'ente gar ara'novo kaysh?">t&on'ente gar ara'novo k[x?</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Должен ли ты защищать его?
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Gar vegyc'ara'novo kaysh">gar veg&x'ara'novo k[x</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Тебе необходимо его защитить
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Gar ne'vegyc ara'novo kaysh">gar nq'veg&x ara'novo k[x</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Тебе нет необходимости его защищать
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Tion'vegyc gar ara'novo kaysh?">t&on'veg&x gar ara'novo k[x?</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Нужно ли тебе защищать его?
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Gar ret'ara'novo kaysh">gar ret'ara'novo k[x</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Ты мог его защитить
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Gar ne'ret ara'novo kaysh">gar nq'ret ara'novo k[x</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Ты не мог его защитить
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Tion'ret gar ara'novo kaysh?">t&on'ret gar ara'novo k[x?</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Мог ли ты его защитить?
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Gar gyc'ara'novo kaysh">gar g&x'ara'novo k[x</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Ты его защитишь
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Gar ne'gyc ara'novo kaysh">gar nq'g&x ara'novo k[x</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Ты его не защитишь?
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Tion'gyc gar ara'novo kaysh?">t&on'g&x gar ara'novo k[x?</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Ты его защитишь?
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Gar duur'ara'novo kaysh">gar d}r'ara'novo k[x</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Ты можешь его защищать
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Gar nu'duur ara'novo kaysh">gar n]'d}r ara'novo k[x</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Ты не можешь его защищать
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                <span class="mandor_2" translate="Tion'duur gar ara'novo kaysh?">t&on'd}r gar ara'novo k[x?</span>
+                            </td>
+                            <td class = 'grammar_example_6_td'>
+                                Можешь ли ты его защищать?
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class = 'gr_main_rule' id="gr_rule_6">
+                <h5>Прилагательные</h5>
+                <div class = 'indent'>
+                    Прилагательные в мандо'а имеют два распространенных окончания
+                    <span class="mandor_1" translate="-la">-la</span> или
+                    <span class="mandor_1" translate="-yc">-&x</span>.</br></br>
+                    Однако, большая часть прилагательных не имеет никаких окончаний.</br>
+                    По морфологии они не отличаются от существительных,</br>
+                    и то, что это прилагательные, можно понять только по их роли в предложении.</br></br>
+
+                    Перед окончанием <span class="mandor_1" translate="-yc">-&x</span>,
+                    а в архаичных словах и перед окончанием
+                    <span class="mandor_1" translate="-la">-la</span>,
+                    знак бэйтэн <span class="mandor_1" translate="'">'</span>
+                    обычно не ставится.
+                    <div class = 'example'>
+                        Пример:
+                        <table class = 'grammar_example_6'>
+                            <tr>
+                                <td class = 'grammar_example_6_th'>
+                                    окончание </br><span class="mandor_1" translate="-la">-la</span>
+                                </td>
+                                <td class = 'grammar_example_6_th'>
+                                    перевод
+                                </td>
+                                <td class = 'grammar_example_6_th'>
+                                    окончание </br><span class="mandor_1" translate="-yc">-&x</span>
+                                </td>
+                                <td class = 'grammar_example_6_th'>
+                                    перевод
+                                </td>
+                                <td class = 'grammar_example_6_th'>
+                                    без</br>окончания
+                                </td>
+                                <td class = 'grammar_example_6_th'>
+                                    перевод
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'grammar_example_6_td'>
+                                    <span class="mandor_2" translate="novor'la">novor'la</span>
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    защищенный, неприступный
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    <span class="mandor_2" translate="verd'yc">vqrd'&x</span>
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    агрессивный</br>(в положительном смысле)
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    <span class="mandor_2" translate="ne'tra">nq'tra</span>
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    черный
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'grammar_example_6_td'>
+                                    <span class="mandor_2" translate="shuk'la">x]k'la</span>
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    сломаный,</br>разбитый на куски
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    <span class="mandor_2" translate="ret'yc">ret'&x</span>
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    возможный
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    <span class="mandor_2" translate="pakod">pakod</span>
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    простой, лёгкий
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'grammar_example_6_td'>
+                                    <span class="mandor_2" translate="ruusala">r}sala</span>
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    доверчивый, легковерный
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    <span class="mandor_2" translate="haryc">har&x</span>
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    уставший
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    <span class="mandor_2" translate="serim">ser&m</span>
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    точный, верный
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'grammar_example_6_td'>
+                                    <span class="mandor_2" translate="oriyala">or&yala</span>
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    городской
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    <span class="mandor_2" translate="caburyc">kab]r&x</span>
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    заботливый
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    <span class="mandor_2" translate="veman">veman</span>
+                                </td>
+                                <td class = 'grammar_example_6_td'>
+                                    настоящий, подлинный
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class = 'gr_main_rule' id="gr_rule_6_1">
+                <h5>Сравнительная форма прилагательного</h5>
+                <div class = 'indent'>
+                    Сравнительная форма прилагательного образуется при помощи добавления к полной форме прилагательного окончания
+                    <span class="mandor_1" translate="-shya">-x&a</span> .</br></br>
+                    Если прилагательное имеет окончания <span class="mandor_1" translate="-la">-la</span> или
+                    <span class="mandor_1" translate="-yc">-&x</span> и оно отделено от корня знаком бэйтэн
+                    <span class="mandor_1" translate="'">'</span>, </br>то бэйтэн на письме смещается для отделения
+                    второго окончания <span class="mandor_1" translate="-shya">-x&a</span>
+                    от полной формы прилагательного.</br></br>
+                    В данном способе трансформации прилагательных сохранилось достаточно много исключений. </br>Например,
+                    в словах <span class="mandor_1" translate="ori'shya">or&'x&a</span> или
+                    <span class="mandor_1" translate="dushishya">d]x&x&a</span> можно увидеть,
+                    что архаичные способы образования сравнительной формы были более разнообразны.</br></br>
+                    <div class="example">
+                        Пример:
+                        <table class = 'word_transformation'>
+                            <tr>
+                                <td class = 'word_transformation_th'>
+                                    прилагательное
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    окончание
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    сравнительная форма
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    перевод
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="jahaala">
+                                        jahAla</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="-'shya">
+                                        -'x&a</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="jahaala'shya">
+                                        jahAla'x&a</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    здоровый => здоровее
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="yaim'la">
+                                        y[m'la</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="-'shya">
+                                        -'x&a</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="yaimla'shya">
+                                        y[mla'x&a</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    комфортный => комфортнее
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="iviin'yc">
+                                        &v%n'&x</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="-'shya">
+                                        -'x&a</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="iviinyc'shya">
+                                        &v%n&x'x&a</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    быстрый => быстрее
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="oryc">
+                                        or&x</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="-'shya">
+                                        -'x&a</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="ori'shya">
+                                        or&'x&a</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    большой => больше
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="dush">
+                                        d]x</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="-'shya">
+                                        -'x&a</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="dushishya">
+                                        d]x&x&a</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    плохой => хуже
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class = 'gr_main_rule' id="gr_rule_6_2">
+                <h5>Превосходная форма прилагательного</h5>
+                <div class = 'indent'>
+                    Превосходная форма прилагательного образуется по принципу, схожему с образованием
+                    сравнительной формы, </br>только к полной форме прилагательного добавляется окончание
+                    <span class="mandor_1" translate="-ne">-nq</span> .</br></br>
+                    Если прилагательное имеет окончания <span class="mandor_1" translate="-la">-la</span> или
+                    <span class="mandor_1" translate="-yc">-&x</span> и оно отделено от корня знаком бэйтэн
+                    <span class="mandor_1" translate="'">'</span>, </br>то бэйтэн на письме смещается для отделения
+                    второго окончания <span class="mandor_1" translate="-ne">-nq</span>
+                    от полной формы прилагательного.</br></br>
+                    В способе построения превосходной формы прилагательных также сохранились архаические исключения.
+                    </br></br>
+                    <div class="example">
+                        Пример:
+                        <table class = 'word_transformation'>
+                            <tr>
+                                <td class = 'word_transformation_th'>
+                                    прилагательное
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    окончание
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    сравнительная форма
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    перевод
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="jahaala">
+                                        jahAla</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="-'ne">
+                                        -'nq</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="jahaala'ne">
+                                        jahAla'nq</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    здоровый => здоровейший
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="yaim'la">
+                                        y[m'la</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="-'ne">
+                                        -'nq</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="yaimla'ne">
+                                        y[mla'nq</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    комфортный => комфортнейший
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="iviin'yc">
+                                        &v%n'&x</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="-'ne">
+                                        -'nq</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="iviinyc'ne">
+                                        &v%n&x'nq</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    быстрый => быстрейший
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="oryc">
+                                        or&x</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="-'ne">
+                                        -'nq</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="orycne">
+                                        or&xnq</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    большой => наибольший
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="dush">
+                                        d]x</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="-'ne">
+                                        -'nq</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="dushne">
+                                        d]xnq</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    плохой => худший
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class = 'gr_main_rule' id="gr_rule_7">
+                <h5>Союзы</h5>
+                <div class = 'indent'>
+                    <table class="unions">
+                        <tr>
+                            <td class = 'unions_th'>
+                                союз
+                            </td>
+                            <td class = 'unions_th'>
+                                перевод
+                            </td>
+                            <td class = 'unions_th'>
+                                пример
+                            </td>
+                            <td class = 'unions_th'>
+                                перевод
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'unions_td'>
+                                <span class="mandor_2" translate="adu">ad]</span>
+                            </td>
+                            <td class = 'unions_td'>
+                                кто, который
+                            </td>
+                            <td class = 'unions_td'>
+                                <span class="mandor_2" translate="Ni kar'mi burc'ya adu ven'gaa'tayli gar">
+                                    ni kar'm& b]rx'a ad] ven'gA't[l& gar</span>
+                            </td>
+                            <td class = 'unions_td'>
+                                Я знаю одного парня, который поможет тебе
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'unions_td'>
+                                <span class="mandor_2" translate="meg, megin">mqg, mqgin</span>
+                            </td>
+                            <td class = 'unions_td'>
+                                что, который
+                            </td>
+                            <td class = 'unions_td'>
+                                <span class="mandor_2" translate="Ni kar'tayli meg gar copaani narir ti kaysh">
+                                    ni kar't[l& mqg gar kopAn& nar&r ti k[x</span>
+                            </td>
+                            <td class = 'unions_td'>
+                                Я знаю, что он хочет сделать с ними
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'unions_td'>
+                                <span class="mandor_2" translate="beh">beh</span>
+                            </td>
+                            <td class = 'unions_td'>
+                                о, об
+                            </td>
+                            <td class = 'unions_td'>
+                                <span class="mandor_2" translate="Ke'rejorhaa'i ni beh gar aliit">
+                                    ke'rejorhA'& ni beh gar al%t</span>
+                            </td>
+                            <td class = 'unions_td'>
+                                Расскажи мне о своем клане
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'unions_td'>
+                                <span class="mandor_2" translate="boru">bor]</span>
+                            </td>
+                            <td class = 'unions_td'>
+                                как, каким образом
+                            </td>
+                            <td class = 'unions_td'>
+                                <span class="mandor_2" translate="Kaysh ne'suvari boru kaysh ru'oyacyi">
+                                    k[x nq's]var& bor] k[x r]'\ax&</span>
+                            </td>
+                            <td class = 'unions_td'>
+                                Он не понял каким образом они выжили
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'unions_td'>
+                                <span class="mandor_2" translate="jor">jor</span>
+                            </td>
+                            <td class = 'unions_td'>
+                                почему, зачем
+                            </td>
+                            <td class = 'unions_td'>
+                                <span class="mandor_2" translate="Kaysh nuho jor kayst hari">
+                                    k[x n]ho jor k[st har&</span>
+                            </td>
+                            <td class = 'unions_td'>
+                                Он спит потому что он устал
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'unions_td'>
+                                <span class="mandor_2" translate="meh">mq</span>
+                            </td>
+                            <td class = 'unions_td'>
+                                если
+                            </td>
+                            <td class = 'unions_td'>
+                                <span class="mandor_2" translate="Ni gyce'kyr'amu meh gar ve'nari bic">
+                                    ni g&xe'k&r'am] mq gar ve'nar& bik</span>
+                            </td>
+                            <td class = 'unions_td'>
+                                Я убью тебя, если ты сделаешь это
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'unions_td'>
+                                <span class="mandor_2" translate="tuu">t}</span>
+                            </td>
+                            <td class = 'unions_td'>
+                                когда
+                            </td>
+                            <td class = 'unions_td'>
+                                <span class="mandor_2" translate="Ke'tracy'a tuu ni naumiiti! ">
+                                    ke'trax&'a t} ni na]m%t&!</span>
+                            </td>
+                            <td class = 'unions_td'>
+                                Стреляй, когда я дам сигнал!
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'unions_td'>
+                                <span class="mandor_2" translate="vai">v[</span>
+                            </td>
+                            <td class = 'unions_td'>
+                                где, откуда
+                            </td>
+                            <td class = 'unions_td'>
+                                <span class="mandor_2" translate="Kaysh yaimpa ogir vai briikari me'sen">
+                                    k[x y[mpa ogir v[ br%kar& mq'sen</span>
+                            </td>
+                            <td class = 'unions_td'>
+                                Он вернулся туда, где спрятал космический корабль
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = 'unions_td'>
+                                <span class="mandor_2" translate="par">par</span>
+                            </td>
+                            <td class = 'unions_td'>
+                                для, чтобы
+                            </td>
+                            <td class = 'unions_td'>
+                                <span class="mandor_2" translate="Kaysh ba'slana par tegaanali vode">
+                                    k[x ba'slana par tqgAnal& vodq</span>
+                            </td>
+                            <td class = 'unions_td'>
+                                Он отступил, чтобы спасти братьев
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class = 'gr_main_rule' id="gr_rule_10">
+                <h5>Предложение</h5>
+                <div class = 'indent'>
+                    Порядок слов в базовой форме предложения является прямым и фиксированным:</br>
+                    подлежащее => сказуемое => дополнение => обстоятельство</br></br>
+                    В мандо'а почти всегда используются полные предложения.</br>
+                    В редких исключениях, когда действующий субъект неизвестен, подлежащее может быть пропущено.</br></br>
+                    <div class="example">
+                        Пример:
+                        <table class = 'word_transformation'>
+                            <tr>
+                                <td class = 'word_transformation_th'>
+                                    подлежащее
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    сказуемое
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    дополнение
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    обстоятельство
+                                </td>
+                                <td class = 'word_transformation_th'>
+                                    перевод
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="Kaysh">
+                                        k[x</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="pare">
+                                        parq</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="ni">
+                                        ni</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="o'r ven'tuur">
+                                        o'r ven't}r</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    Он ждет меня завтра
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="(Ash'ade)">
+                                        (ax'adq)</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="ru'chaku">
+                                        r]'cak]</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="kaysh">
+                                        k[x</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    <span class="mandor_2" translate="or kurs">
+                                        or k]rs</span>
+                                </td>
+                                <td class = 'word_transformation_td'>
+                                    Его ограбили в лесу
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class = 'gr_main_rule' id="gr_rule_10_1">
+                <h5>Подлежащее</h5>
+                <div class = 'indent'>
+                    Подлежащее, действующее лицо или субъект, является главным членом предложения.</br>
+                    Чаще всего подлежащее в мандо'а представляет собой существительное, местоимение или числительное.</br>
+                    В редких случаях подлежащее может быть выражено словосочетанием и даже инфинитивом глагола.</br></br>
+
+                    <div class="example">
+                        Пример:
+                        <table class = 'subject'>
+                            <tr>
+                                <td class = 'subject_th'>
+                                    часть речи
+                                </td>
+                                <td class = 'subject_th'>
+                                    подлежащее
+                                </td>
+                                <td class = 'subject_th'>
+                                    предложение
+                                </td>
+                                <td class = 'subject_th'>
+                                    перевод
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'subject_td1'>
+                                    местоимение
+                                </td>
+                                <td class = 'subject_td'>
+                                    <span class="mandor_2" translate="Kaysh">
+                                        k[x</span>
+                                </td>
+                                <td class = 'subject_td'>
+                                    <span class="mandor_2" translate="Kaysh tsikado besbe par sol'akaan">
+                                        k[x ts&kado besbq par sol'akAn</span>
+                                </td>
+                                <td class = 'subject_td2'>
+                                    Он готовит снаряжение к битве
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'subject_td1'>
+                                    существительное
+                                </td>
+                                <td class = 'subject_td'>
+                                    <span class="mandor_2" translate="Tra'gaal">
+                                        tra'gAl</span>
+                                </td>
+                                <td class = 'subject_td'>
+                                    <span class="mandor_2" translate="Tra'gaal yaimpa at ori'sen">
+                                        tra'gAl y[mpa at or&'sen</span>
+                                </td>
+                                <td class = 'subject_td2'>
+                                    Боевой истребитель вернулся на крейсер
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'subject_td1'>
+                                    глагол</br>(в инфинитиве)
+                                </td>
+                                <td class = 'subject_td'>
+                                    <span class="mandor_2" translate="Ara'novor">
+                                        ara'novor</span>
+                                </td>
+                                <td class = 'subject_td'>
+                                    <span class="mandor_2" translate="Ara'novor aliit - ali'nar par mando'ad">
+                                        ara'novor al%t - al&'nar par mando'ad</span>
+                                </td>
+                                <td class = 'subject_td2'>
+                                    Защищать клан (семью) - долг для мандалорца
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class = 'gr_main_rule' id="gr_rule_10_2">
+                <h5>Простое сказуемое</h5>
+                <div class = 'indent'>
+                    Простое сказуемое выражено глаголом и описывает то действие,
+                    которое субъект совершает над объектом.</br></br>
+                    Отрицание ставится непосредственно к глаголу.</br></br>
+
+                    <div class="example">
+                        Пример:
+                        <table class = 'grammar_example'>
+                            <tr>
+                                <td class = 'grammar_example_td'>
+                                    <span class="mandor_2" translate="Ni hari">
+                                        ni har&</span>
+                                </td>
+                                <td class = 'grammar_example_td'>
+                                    Я устал
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'grammar_example_td'>
+                                    <span class="mandor_2" translate="Ni ne'hari">
+                                        ni  nq'har&</span>
+                                </td>
+                                <td class = 'grammar_example_td'>
+                                    Я не устал
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class = 'gr_main_rule' id="gr_rule_10_3">
+                <h5>Составное сказуемое</h5>
+                <div class = 'indent'>
+                    Составное сказуемое состоит из двух глаголов: </br>основного глагола, стоящего в личной форме,
+                    и уточняющего глагола, стоящего в инфинитиве.</br></br>
+                    Отрицание может быть поставлено как к основному глаголу, так и к уточняющему.</br></br>
+                    Между основным и уточняющим глаголом может находиться прилагательное в сравнительной форме,</br>
+                    которое указывает на особую характеристику уточняющего глагола.
+                    </br></br>
+
+                    <div class="example">
+                        Пример:
+                        <table class = 'grammar_example'>
+                            <tr>
+                                <td class = 'grammar_example_td'>
+                                    <span class="mandor_2" translate="Ni copaani epar">
+                                        ni kopAn& epar</span>
+                                </td>
+                                <td class = 'grammar_example_td'>
+                                    Я хочу есть
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'grammar_example_td'>
+                                    <span class="mandor_2" translate="Ni ne'copaani epar">
+                                        ni nq'kopAn& epar</span>
+                                </td>
+                                <td class = 'grammar_example_td'>
+                                    Я не хочу есть
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'grammar_example_td'>
+                                    <span class="mandor_2" translate="Ni copaani n'epar al nuhor">
+                                        ni kopAn& n'epar al n]hor</span>
+                                </td>
+                                <td class = 'grammar_example_td'>
+                                    Я хочу не есть, а спать
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'grammar_example_td'>
+                                    <span class="mandor_2" translate="Ni copaani nuhor ori'shya me epar">
+                                        ni kopAn& n]hor or&'x&a me epar</span>
+                                </td>
+                                <td class = 'grammar_example_td'>
+                                    Я хочу спать больше, чем есть
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class = 'gr_main_rule' id="gr_rule_10_7">
+                <h5>Вопросительная форма предложения</h5>
+                <div class = 'indent'>
+                    При помощи вопросительной приставки <span class="mandor_1" translate="Tion'">t&on'</span>
+                    утверждение можно превратить в вопрос.</br></br>
+                    При этом слово, к которому относится вопрос, вместе с приставкой
+                    <span class="mandor_1" translate="Tion'">t&on'</span> перемещается в начало предложения.</br></br>
+
+                    <div class="example">
+                        Пример:
+                        <table class = 'subject'>
+                            <tr>
+                                <td class = 'subject_th'>
+                                    вид предложения
+                                </td>
+                                <td class = 'subject_th'>
+                                    вопросительное слово
+                                </td>
+                                <td class = 'subject_th'>
+                                    предложение
+                                </td>
+                                <td class = 'subject_th'>
+                                    перевод
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'subject_td1'>
+                                    утвердительное</br>предложение
+                                </td>
+                                <td class = 'subject_td'>
+                                    &nbsp;
+                                </td>
+                                <td class = 'subject_td'>
+                                    <span class="mandor_2" translate="Mhi hibira mando'a iviin'yc">
+                                        mi h&b&ra mando'a &v%n'&x</span>
+                                </td>
+                                <td class = 'subject_td2'>
+                                    Мы изучаем мандо'а быстро
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'subject_td1'>
+                                    вопрос к подлежащему
+                                </td>
+                                <td class = 'subject_td'>
+                                    <span class="mandor_2" translate="Tion'mhi">
+                                        t&on'mi</span>
+                                </td>
+                                <td class = 'subject_td'>
+                                    <span class="mandor_2" translate="Tion'mhi hibira mando'a iviin'yc?">
+                                        t&on'mi h&b&ra mando'a &v%n'&x?</span>
+                                </td>
+                                <td class = 'subject_td2'>
+                                    <i style="font-size:110%">Мы</i> изучаем мандо'а быстро?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'subject_td1'>
+                                    вопрос к сказуемому
+                                </td>
+                                <td class = 'subject_td'>
+                                    <span class="mandor_2" translate="Tion'hibira">
+                                        t&on'h&b&ra</span>
+                                </td>
+                                <td class = 'subject_td'>
+                                    <span class="mandor_2" translate="Tion'hibira mhi mando'a iviin'yc?">
+                                        t&on'h&b&ra mi mando'a &v%n'&x?</span>
+                                </td>
+                                <td class = 'subject_td2'>
+                                    <i style="font-size:110%">Изучаем</i> мы мандо'а быстро?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'subject_td1'>
+                                    вопрос к дополнению
+                                </td>
+                                <td class = 'subject_td'>
+                                    <span class="mandor_2" translate="Tion'mando'a">
+                                        t&on'mando'a</span>
+                                </td>
+                                <td class = 'subject_td'>
+                                    <span class="mandor_2" translate="Tion'mando'a mhi hibira iviin'yc?">
+                                        t&on'mando'a mi h&b&ra &v%n'&x?</span>
+                                </td>
+                                <td class = 'subject_td2'>
+                                    <i style="font-size:105%">Мандо'а</i> мы изучаем быстро?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'subject_td1'>
+                                    вопрос к обстоятельству
+                                </td>
+                                <td class = 'subject_td'>
+                                    <span class="mandor_2" translate="Tion'iviin'yc">
+                                        t&on'&v%n'&x</span>
+                                </td>
+                                <td class = 'subject_td'>
+                                    <span class="mandor_2" translate="Tion'iviin'yc mhi hibira mando'a?">
+                                        t&on'&v%n'&x mi h&b&ra mando'a?</span>
+                                </td>
+                                <td class = 'subject_td2'>
+                                    <i style="font-size:110%">Быстро</i> мы изучаем мандо'а?
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class = 'gr_main_rule' id="gr_rule_10_8">
+                <h5>Вопросительные слова</h5>
+                <div class = 'indent'>
+                    Помимо универсальной вопросительной приставки <span class="mandor_1" translate="Tion'">t&on'</span>
+                    в мандо'а используется ряд вопросительных слов, конкретизирующих вопрос.
+                    </br></br>
+
+                    <div class="example">
+                        Пример:
+                        <table class="unions">
+                            <tr>
+                                <td class = 'unions_th'>
+                                    вопросительное</br>слово
+                                </td>
+                                <td class = 'unions_th'>
+                                    перевод
+                                </td>
+                                <td class = 'unions_th'>
+                                    пример
+                                </td>
+                               <td class = 'unions_th'>
+                                    перевод
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="tion'ad">t&on'ad</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    кто?
+                                </td>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="Tion'ade ru'naasta keldab?">
+                                        t&on'adq r]'nAsta keldab?</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    Кто разрушил цитадель?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="tion'meg">t&on'mqg</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    что?
+                                </td>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="Tion'meg gar suri?">
+                                        t&on'mqg gar s]r&?</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    Что ты видишь?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="tion'tuur">t&on't}r</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    когда?
+                                </td>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="Tion'tuur gar yaimpa at yaim'dab'ika?">
+                                        t&on't}r gar y[mpa at y[m'dab'iku?</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    Когда ты возвращаешься в лагерь?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="tion'vaii">t&on'v[i</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    где?
+                                </td>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="Tion'vaii gar digu tracy'kaan?">
+                                        t&on'v[i gar d&g] trax&'kAn?</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    Где ты забыл огнемет?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="tion'jor">t&on'jor</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    почему?
+                                </td>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="Tion'jor ni ne'kar'tayli ibic?">
+                                        t&on'jor ni nq'kar't[l& ibik?</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    Почему я этого не знаю?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="tion'solet">t&on'solet</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    сколько?
+                                </td>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="Tion'solet mu'naryc ni su'pare?">
+                                        t&on'solet m]'nar&x ni s]'parq?</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    Насколько долго мне еще ждать?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="tion'bor">t&on'bor</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    как? каким образом?
+                                </td>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="Tion'bor yust mhi gyce'slana?">
+                                        t&on'bor y]st mi g&xe'slana?</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    Каким маршрутом мы хотим пойти?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="tion'meh">t&on'mq</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    что если?
+                                </td>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="Tion'meh gar n'olaro?">
+                                        t&on'mq gar n'olaro?</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    Что если он не придет?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="tion'beh">t&on'beh</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    что насчет?
+                                </td>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="Tion'beh hailir cetare?">
+                                        t&on'beh h[l&r setarq?</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    Что насчет пожрать?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="tion'tan">t&on'tan</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    какой?
+                                </td>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="Tion'tan isir gana ibic tihaar?">
+                                        t&on'tan &sir gana ibik t&hAr?</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    Какой вкус у этого фруктового бренди?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="tion'par">t&on'par</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    зачем? для чего?
+                                </td>
+                                <td class = 'unions_td'>
+                                    <span class="mandor_2" translate="Tion'par gar ru'chaabi ba'buir?">
+                                        t&on'par gar r]'cAb& ba'b;ir?</span>
+                                </td>
+                                <td class = 'unions_td'>
+                                    Зачем ты напугал бабушку?
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

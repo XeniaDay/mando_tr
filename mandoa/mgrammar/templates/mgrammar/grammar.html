@@ -1,0 +1,43 @@
+{% extends 'dictionary/base_design.html' %}
+
+{% block title %}Грамматика{% endblock %}
+
+{% block navigat1 %}
+<a href="{% url 'home' %}" class="a_nav">Словарь</a> |
+| <a href="{% url 'phrasebook' %}" class="a_nav">Разговорник</a> |
+| <a href="{% url 'mgrammar' %}" class="a_nav">Грамматика</a>
+{% endblock %}
+
+{% block underline %}
+    <table class="nav_lang">
+        <tr>
+            <td class="rus_eng">
+                <a href="{% url 'grammar' %}" class="a_link">
+                    <div class="lang_underline">
+                        <div class="align_lg">r]S'a</div>
+                        <div class="add_text_lg">РУС</div>
+                    </div>
+                </a>
+            </td>
+            <td class="rus_eng">
+                <a href="{% url 'grammar_eng' %}" class="a_link">
+                    <div>
+                        <div class="align_lg">engle'a</div>
+                        <div class="add_text_lg">ENG</div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="button_login"></button>
+            </td>
+        </tr>
+    </table>
+{% endblock %}
+
+{% block aside %}
+{% endblock %}
+
+{% block content %}
+{% endblock %}
